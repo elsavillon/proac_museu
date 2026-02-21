@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é preservação digital?</title>
+
+    <!-- Pré-carregamento das fontes -->
+    <link rel="preload" href="fonts/Gilroy-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main>
+
+<header>
+    <h1>O que é preservação digital?</h1>
+</header>
+
+<section>
+    <p>É comum associarmos segurança ou preservação de arquivos digitais com práticas de <strong>backup</strong>. No entanto, embora o <strong>backup</strong> seja uma parte fundamental, a preservação digital não se limita apenas a esta prática.</p>
+
+    <p>Assim como coleções e documentos físicos exigem uma série de cuidados contínuos, documentos e arquivos digitais também necessitam de processos que garantam a eles vida longa, mesmo com a <strong>obsolescência das tecnologias</strong>. É por meio do estabelecimento destas ações contínuas que se garantirá que os arquivos possam ser acessados por muito tempo, desde sua criação até a socialização para o público.</p>
+
+    <p>Uma vez estabelecidos protocolos de coleta, organização, catalogação, armazenamento e verificação rotineiras, nos certificamos de que os documentos e arquivos digitais manterão suas características originais e serão evitados a corrupção dos arquivos e a perda de conteúdo. Nesta cartilha vamos abordar algumas das principais medidas a serem consideradas para cada um destes pontos.</p>
+</section>
+
+<section>
+    <h2>Integridade</h2>
+
+    <p>É fundamental garantir a transferência de arquivos sem qualquer alteração ou compressão. Para demonstrar que este processo se deu de forma segura, é importante acompanhar detalhadamente a cópia dos arquivos, se possível verificando as suas <strong>hashes</strong>.</p>
+
+    <p><strong>Hashes</strong> ou <strong>checksums</strong> são valores em letras e números atribuídos a cada arquivo digital de forma exclusiva, como se para cada um fosse dado um CPF, que o identifica individualmente. Ao se copiar um arquivo, pode-se verificar que os <strong>hashes</strong> do arquivo original e da cópia são iguais, demonstrando que são cópias exatas. Em contrapartida, se os arquivos apresentarem <strong>hashes</strong> incompatíveis após a copiagem fica evidenciado que houve algum tipo de alteração ou o arquivo copiado foi corrompido de alguma forma.</p>
+</section>
+
+<section>
+    <h2>Backup de dispositivos</h2>
+
+    <p>Quanto à cópia, é importante definir que tipo de cópia será o ideal para cada caso. Embora relacionados, <strong>imagem de disco</strong> e <strong>cópia lógica</strong> são conceitos diferentes. Uma imagem de disco é uma cópia bit a bit de um disco rígido ou partição, incluindo todos os dados (mesmo excluídos ou não alocados) e a estrutura do disco. Já uma cópia lógica copia apenas os arquivos visíveis e acessíveis pelo sistema operacional.</p>
+
+    <div class="table-container">
+        <table>
+            <caption>Comparação entre imagem de disco e cópia lógica</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Imagem de Disco</th>
+                    <th scope="col">Cópia Lógica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Cópia completa</strong>: réplica exata do disco, incluindo todos os dados, setores, sistema de arquivos e estrutura de partições.</td>
+                    <td><strong>Cópia de dados</strong>: apenas arquivos e pastas, preservando a estrutura lógica do sistema de arquivos e ignorando detalhes de baixo nível.</td>
+                </tr>
+                <tr>
+                    <td><strong>Recuperação completa</strong>: permite restaurar totalmente o disco, incluindo sistema operacional, arquivos e configurações originais.</td>
+                    <td><strong>Recuperação seletiva</strong>: possibilita restaurar arquivos específicos, mas não garante a restauração total do sistema operacional.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tamanho maior</strong>: arquivo final geralmente grande, pois copia todos os dados, inclusive os não utilizados.</td>
+                    <td><strong>Tamanho menor</strong>: normalmente resulta em backup menor, pois copia apenas dados relevantes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemplos</strong>: criação de um arquivo ISO de um DVD; backup completo de um disco rígido.</td>
+                    <td><strong>Exemplos</strong>: cópia de arquivos para um disco externo; backup de arquivos via software específico.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Ao realizar uma cópia lógica é importante utilizar ferramentas que possam criar e verificar as <strong>hashes</strong>, tais como o <strong>Robocopy</strong> (Windows), <strong>Rsync</strong> (Linux, macOS) ou <strong>TeraCopy</strong> (macOS, Windows). É também vital verificar a compatibilidade do sistema de arquivos:</p>
+
+    <ul>
+        <li><strong>Windows + macOS</strong>: use exFAT (melhor equilíbrio).</li>
+        <li><strong>Somente Windows</strong>: use NTFS (recursos completos).</li>
+        <li><strong>Somente Mac</strong>: use APFS (para SSDs) ou HFS+ (para HDDs/Macs antigos).</li>
+        <li><strong>Compatibilidade máxima</strong>: use FAT32 (se não houver arquivos &gt;4 GB).</li>
+        <li><strong>Linux</strong>: use ext4.</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Armazenamento: HDD vs. SSD</h3>
+
+    <div class="table-container">
+        <table>
+            <caption>Comparação entre HDD e SSD</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Característica</th>
+                    <th scope="col">HDD (Hard Disk Drive)</th>
+                    <th scope="col">SSD (Solid State Drive)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Custo</th>
+                    <td>Mais baratos, especialmente em altas capacidades.</td>
+                    <td>Mais caros por tecnologia mais atualizada e melhor desempenho.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Velocidade</th>
+                    <td>Mais lentos, especialmente em gravação.</td>
+                    <td>Mais rápidos para leitura e escrita.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Confiabilidade</th>
+                    <td>Suscetíveis a falhas mecânicas, mas com mais chance de recuperação.</td>
+                    <td>Mais confiáveis a longo prazo (sem partes móveis).</td>
+                </tr>
+                <tr>
+                    <th scope="row">Conectividade</th>
+                    <td>USB-C (rápido) ou USB-A (comum).</td>
+                    <td>USB-C ou NVMe em equipamentos modernos (muito rápidos).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section>
+    <h2>Gestão de metadados e catalogação</h2>
+
+    <p><strong>Metadados</strong> são dados sobre dados. Eles apresentam detalhes importantes para classificar a obra e dar contexto a ela (ex: artista, data, duração, tamanho do arquivo). A gestão desses metadados melhora o acesso e facilita a integração em diferentes bases.</p>
+
+    <p><strong>Catalogar</strong> significa organizar informações de forma estruturada para que seus arquivos possam ser encontrados e utilizados. Um catálogo pode incluir informações descritivas, contextuais, técnicas e de direitos autorais. O fundamental é garantir um sistema consistente que seja acessível e funcional para quem está catalogando. As normas devem ser escritas, publicadas e fáceis de consultar por todos os envolvidos.</p>
+</section>
+
+<section>
+    <h2>Preservação dos conteúdos</h2>
+
+    <ul>
+        <li>Manter organização estruturada de diretórios/pastas coerente e claramente nomeada.</li>
+        <li>Nomear arquivos de forma consistente, sem caracteres especiais e acentos. Utilize o <strong>subtraço (_)</strong>.</li>
+        <li>Guardar registros em um <strong>pacote de informações</strong> com documentação ou metadados.</li>
+        <li>Dar preferência a <strong>formatos não-proprietários</strong> e sem compressão.</li>
+    </ul>
+
+    <p>Consulte a <a href="https://www.loc.gov/preservation/resources/rfs/index.html" target="_blank" rel="noopener noreferrer">Declaração de Formatos Recomendados (RFS)</a> da Biblioteca do Congresso.</p>
+</section>
+
+<section>
+    <h2>Estratégia de Armazenamento 3-2-1</h2>
+
+    <ul>
+        <li>No mínimo <strong>três cópias</strong>.</li>
+        <li>Ao menos <strong>dois suportes distintos</strong>.</li>
+        <li>Ao menos <strong>uma cópia em outra localidade</strong>.</li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="referencias">
+    <h2>Referências</h2>
+    <ul>
+        <li>CONARQ – <a href="https://www.gov.br/conarq/">Publicações</a></li>
+        <li>Dublin Core – <a href="https://www.dublincore.org/">Site oficial</a></li>
+    </ul>
+</section>
+
+<section class="ficha-tecnica">
+    <h2>Ficha Técnica</h2>
+    <p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
+    <p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
+    <p><strong>Projeto Gráfico:</strong> Mariana Afonso</p>
+</section>
+
+<footer>
+    <p class="small-text">
+        Este material foi realizado com recursos do Programa de Ação Cultural – ProAC.
+    </p>
+</footer>
+
+</main>
+
+</body>
+</html>
