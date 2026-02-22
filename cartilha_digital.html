@@ -23,25 +23,28 @@
 </header>
 
 <section>
-    <p>É comum associarmos segurança ou preservação de arquivos digitais com práticas de <strong>backup</strong>. No entanto, embora o <strong>backup</strong> seja uma parte fundamental, a preservação digital não se limita apenas a esta prática.</p>
+    <p>É comum associarmos segurança ou preservação de arquivos digitais com práticas de <i>backup</i>. No entanto, embora o <i>backup</i> seja uma parte fundamental, a preservação digital não se limita apenas a esta prática</p>
 
-    <p>Assim como coleções e documentos físicos exigem uma série de cuidados contínuos, documentos e arquivos digitais também necessitam de processos que garantam a eles vida longa, mesmo com a <strong>obsolescência das tecnologias</strong>. É por meio do estabelecimento destas ações contínuas que se garantirá que os arquivos possam ser acessados por muito tempo, desde sua criação até a socialização para o público.</p>
+    <p>Assim como coleções e documentos físicos exigem uma série de cuidados contínuos, documentos e arquivos digitais também necessitam de processos que garantam a eles vida longa, mesmo com a obsolescência das tecnologias.</p> 
+    
+    <p>É por meio do estabelecimento destas ações contínuas que se garantirá que os arquivos possam ser acessados por muito tempo, desde sua criação até a socialização para o público. Uma vez estabelecidos protocolos de coleta, organização, catalogação, armazenamento e verificação rotineiras, nos certificamos de que os documentos e arquivos digitais manterão suas características originais e serão evitados a corrupção dos arquivos e a perda de conteúdo.</p>
+    
+    <p>Nesta cartilha vamos abordar algumas das principais medidas a serem consideradas para cada um destes pontos.</p>
 
-    <p>Uma vez estabelecidos protocolos de coleta, organização, catalogação, armazenamento e verificação rotineiras, nos certificamos de que os documentos e arquivos digitais manterão suas características originais e serão evitados a corrupção dos arquivos e a perda de conteúdo. Nesta cartilha vamos abordar algumas das principais medidas a serem consideradas para cada um destes pontos.</p>
 </section>
 
 <section>
     <h2>Integridade</h2>
 
-    <p>É fundamental garantir a transferência de arquivos sem qualquer alteração ou compressão. Para demonstrar que este processo se deu de forma segura, é importante acompanhar detalhadamente a cópia dos arquivos, se possível verificando as suas <strong>hashes</strong>.</p>
+    <p>É fundamental garantir a transferência de arquivos sem qualquer alteração ou compressão. Para demonstrar que este processo se deu de forma segura, é importante acompanhar detalhadamente a cópia dos arquivos, se possível verificando as suas <i>hashes</i>.</p>
 
-    <p><strong>Hashes</strong> ou <strong>checksums</strong> são valores em letras e números atribuídos a cada arquivo digital de forma exclusiva, como se para cada um fosse dado um CPF, que o identifica individualmente. Ao se copiar um arquivo, pode-se verificar que os <strong>hashes</strong> do arquivo original e da cópia são iguais, demonstrando que são cópias exatas. Em contrapartida, se os arquivos apresentarem <strong>hashes</strong> incompatíveis após a copiagem fica evidenciado que houve algum tipo de alteração ou o arquivo copiado foi corrompido de alguma forma.</p>
+    <p><i>Hashes</i> ou <i>checksums</i> são valores em letras e números atribuídos a cada arquivo digital de forma exclusiva, como se para cada um fosse dado um CPF, que o identifica individualmente. Ao se copiar um arquivo, pode-se verificar que os <i>hashes</i> do arquivo original e da cópia são iguais, demonstrando que são cópias exatas. Em contrapartida, se os arquivos apresentarem <i>hashes</i> incompatíveis após a copiagem fica evidenciado que houve algum tipo de alteração ou o arquivo copiado foi corrompido de alguma forma.</p>
 </section>
 
 <section>
     <h2>Backup de dispositivos</h2>
 
-    <p>Quanto à cópia, é importante definir que tipo de cópia será o ideal para cada caso. Embora relacionados, <strong>imagem de disco</strong> e <strong>cópia lógica</strong> são conceitos diferentes. Uma imagem de disco é uma cópia bit a bit de um disco rígido ou partição, incluindo todos os dados (mesmo excluídos ou não alocados) e a estrutura do disco. Já uma cópia lógica copia apenas os arquivos visíveis e acessíveis pelo sistema operacional.</p>
+    <p>Quanto à cópia, é importante definir que tipo de cópia será o ideal para cada caso. Embora relacionados, <u>imagem de disco</u> e <u>cópia lógica</u> são conceitos diferentes. Uma imagem de disco é uma cópia bit a bit de um disco rígido ou partição, incluindo todos os dados (mesmo excluídos ou não alocados) e a estrutura do disco. Já uma cópia lógica copia apenas os arquivos visíveis e acessíveis pelo sistema operacional, ignorando dados não alocados e a estrutura física do disco:</p>
 
     <div class="table-container">
         <table>
@@ -73,7 +76,9 @@
         </table>
     </div>
 
-    <p>Ao realizar uma cópia lógica é importante utilizar ferramentas que possam criar e verificar as <strong>hashes</strong>, tais como o <strong>Robocopy</strong> (Windows), <strong>Rsync</strong> (Linux, macOS) ou <strong>TeraCopy</strong> (macOS, Windows). É também vital verificar a compatibilidade do sistema de arquivos:</p>
+    <p>Ao realizar uma cópia lógica é importante utilizar ferramentas que possam criar e verificar as <i>hashes</i>, tais como o <strong>Robocopy</strong> (utilitários do Windows), <strong>Rsync</strong> (Linux, macOS) ou <strong>TeraCopy</strong> (macOS, Windows).</p>
+    
+    <p></p>É importante verificar a compatibilidade do armazenamento utilizado com o sistema operacional do computador (Windows, macOS, Linux). O sistema de arquivos configurado afeta a compatibilidade, o desempenho e o tamanho máximo dos arquivos:</p>
 
     <ul>
         <li><strong>Windows + macOS</strong>: use exFAT (melhor equilíbrio).</li>
@@ -85,14 +90,14 @@
 </section>
 
 <section>
-    <h3>Armazenamento: HDD vs. SSD</h3>
+    <p>O armazenamento mais comum é feito em HDDs ou SSDs. O primeiro usa partes mecânicas, como discos magnéticos que giram, para armazenar dados, enquanto o segundo utiliza memória flash, sem partes móveis. As principais diferenças entre estas unidades de armazenamento são:</p>
 
     <div class="table-container">
         <table>
             <caption>Comparação entre HDD e SSD</caption>
             <thead>
                 <tr>
-                    <th scope="col">Característica</th>
+                    <th scope="col"></th>
                     <th scope="col">HDD (Hard Disk Drive)</th>
                     <th scope="col">SSD (Solid State Drive)</th>
                 </tr>
@@ -126,54 +131,242 @@
 <section>
     <h2>Gestão de metadados e catalogação</h2>
 
-    <p><strong>Metadados</strong> são dados sobre dados. Eles apresentam detalhes importantes para classificar a obra e dar contexto a ela (ex: artista, data, duração, tamanho do arquivo). A gestão desses metadados melhora o acesso e facilita a integração em diferentes bases.</p>
+    <p>A definição mais simples sobre metadados que podemos encontrar é: metadados são dados sobre dados. Embora isso possa parecer abstrato, na prática é algo bastante concreto, se considerarmos uma faixa musical como exemplo os metadados seriam o/a artista, a data de lançamento, a duração, os créditos de publicação e composição, o tamanho do arquivo, entre outros. São informações que não consistem na música em si ou em seu conteúdo, mas apresentam detalhes importantes para classificar a obra e dar contexto a ela.</p>
 
-    <p><strong>Catalogar</strong> significa organizar informações de forma estruturada para que seus arquivos possam ser encontrados e utilizados. Um catálogo pode incluir informações descritivas, contextuais, técnicas e de direitos autorais. O fundamental é garantir um sistema consistente que seja acessível e funcional para quem está catalogando. As normas devem ser escritas, publicadas e fáceis de consultar por todos os envolvidos.</p>
+    <p>Considerando-se o grande <a href="https://www.domo.com/learn/infographic/data-never-sleeps-12"> volume de dados digitais que geramos todos os dias</a>, gerir estes dados torna-se uma tarefa indispensável. A gestão dos metadados não apenas melhora o acesso dados, mas também pode facilitar a integração destes em diferentes bases ou sistemas.</p> 
+
+    <p>Catalogar significa organizar informações de forma estruturada para que seus arquivos possam ser encontrados e utilizados. Um catálogo pode incluir informações descritivas, contextuais, detalhes técnicos, informações sobre direitos autorais, palavras-chave e muito mais, variando de informações básicas a descrições aprofundadas. Algum tipo de catalogação é crucial para garantir o acesso futuro, principalmente para acervos maiores. O fundamental aqui é garantir a estruturação de um sistema consistente para esta classificação, o importante é <u>que ele seja acessível e de fato funcione para quem está catalogando</u>.</p>
+
+    <p>Vale reforçar, que a catalogação visa facilitar a localização dos conteúdos gerados. Se não fizer sentido ou for de difícil compreensão, então apenas algumas pessoas conseguirão acessá-los – o que não é o nosso objetivo. Se o padrão adotado não for adequado ou tornar-se obsoleto ele pode e deve ser revisto e substituído. As normas devem ser escritas e publicadas, sendo importante que essas regras adotadas estejam disponíveis e de fácil consulta e conhecimento a todos os envolvidos no processo de catalogação.</p>
+    
+    <p>Com isso em vista, é essencial o papel que cumpre o uso de uma ficha catalográfica, planilha e/ou uma base de dados em um sistema para a catalogação de acervos. Quanto mais ampla a quantidade e a qualidade de informações sobre alguma coisa, mais fácil será sua localização posterior, bem como seu acesso e uso. </p>
+    
 </section>
 
 <section>
     <h2>Preservação dos conteúdos</h2>
 
-    <ul>
-        <li>Manter organização estruturada de diretórios/pastas coerente e claramente nomeada.</li>
-        <li>Nomear arquivos de forma consistente, sem caracteres especiais e acentos. Utilize o <strong>subtraço (_)</strong>.</li>
-        <li>Guardar registros em um <strong>pacote de informações</strong> com documentação ou metadados.</li>
-        <li>Dar preferência a <strong>formatos não-proprietários</strong> e sem compressão.</li>
-    </ul>
+    <p> Ao se preservar um arquivo digital não adianta preservar apenas a sua estrutura (bits), mas também as formas de acessá-los e de garantir sua leitura. Neste sentido, preservar aqui significa, essencialmente, permitir que estes arquivos permaneçam no tempo. É essencial criar estratégias e instrumentos que permitam sua localização, seu uso e o crescimento ordenado dos conteúdos. </p>
 
-    <p>Consulte a <a href="https://www.loc.gov/preservation/resources/rfs/index.html" target="_blank" rel="noopener noreferrer">Declaração de Formatos Recomendados (RFS)</a> da Biblioteca do Congresso.</p>
+    <p> É importante manter uma organização estruturada de diretórios/pastas que seja coerente e nomear claramente estas pastas. Uma boa organização ajuda a manter os arquivos de acordo com sua origem e na garantia de que estes não sejam perdidos ou substituídos acidentalmente. Algumas boas práticas incluem:</p>
+
+    <ul>
+        <li>
+          Dê nomes aos arquivos digitais de forma consistente, criando um modelo de nomenclatura com códigos identificadores exclusivos para ajudar a organizar e distinguir seus arquivos.
+        </li>
+      
+        <li>
+          Não use caracteres especiais como @#$%&*:”’ &lt;&gt;?/\~|, acentos ou espaços em nomes de pastas ou arquivos. É possível usar o subtraço (_).
+        </li>
+      
+        <li>
+          Guarde os registros em um “pacote de informações”: uma pasta autodescritiva que pode incluir documentação ou metadados relacionados, como por exemplo <i>202511_ubatuba_oficina_limpeza_praias</i>.
+        </li>
+      </ul>
+
+    <p>Assim como para os documentos físicos (papel, fotografias, etc), devemos considerar suportes adequados para a sua preservação, com arquivos digitais devemos nos atentar à extensão e formatos. De modo geral, dê preferência aos formatos não-proprietários e sem compressão ou com compressão sem perda para a preservação, e formatos mais leves para acesso:</p>
+
+    <img src="imagens/formatos_suportes_preservacao.png" 
+    alt="Ícones representando cada um dos formatos. Vídeo: MKV, codec FFVI, compressão sem perda/ MP4 (acesso); Imagens: Tiff, sem compressão ou formato original / JPEG (acesso). Áudio: Wave (preservação)/ Mp3 (acesso)"
+    class="img-50">
+
+    <p>Fonte: A “Declaração de Formatos Recomendados” (RFS) é um documento periodicamente atualizado da Biblioteca do Congresso estadunidense que identifica os formatos preferenciais para obras e documentos digitais, a fim de garantir sua acessibilidade e preservação a longo prazo. Disponível em: <a href>https://www.loc.gov/preservation/resources/rfs/index.html </a></p>
 </section>
 
 <section>
-    <h2>Estratégia de Armazenamento 3-2-1</h2>
+    <h2>Armazenamento</h2>
 
-    <ul>
-        <li>No mínimo <strong>três cópias</strong>.</li>
-        <li>Ao menos <strong>dois suportes distintos</strong>.</li>
-        <li>Ao menos <strong>uma cópia em outra localidade</strong>.</li>
-    </ul>
+    <p>Entretanto, independentemente do tipo de mídia ou dispositivo utilizado, nenhum durará para sempre. A vida útil real de uma mídia depende de muitos fatores, como seu ambiente e uso. Boas práticas de armazenamento digitais consideram a escolha de armazenamento, backup constante e monitoramento ativo apropriados.</p>
+
+    <p>Uma palavra-chave para o armazenamento digital é a redundância. Uma solução básica que pode ser adotada é o sistema 3-2-1, que consiste no seguinte esquema:</p>
+
+    <img src="imagens/sistema_3_1.png" alt="Ícones representando cada um dos tópicos. Redundância: mais de uma cópia. Variedade de suportes: mais de uma possibilidade de acesso. Cópia em outra localidade: Armazenamento em uma instituição parceira, por exemplo">
+
+    <p>O sistema funciona de acordo com esta lógica: no mínimo três cópias; ao menos dois suportes distintos; se possível uma outra localidade com cópia de backup e ao menos um acesso offline, que não dependa de conexão com a internet. É importante lembrar aqui que, para qualquer que seja a escolha adotada, os dispositivos de armazenamento precisam de manutenção regular.</p>
+
 </section>
 
 <hr>
 
 <section class="referencias">
     <h2>Referências</h2>
+
     <ul>
-        <li>CONARQ – <a href="https://www.gov.br/conarq/">Publicações</a></li>
-        <li>Dublin Core – <a href="https://www.dublincore.org/">Site oficial</a></li>
+        <u>Conceitos gerais & guias</u>
+    
+        <li>CONARQ – Publicações e orientações em preservação digital<br>
+            <a href="https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/publicacoes-conarq">https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/publicacoes-conarq</a></li>
+    
+        <li>Witness – Guia rápido para preservação digital de vídeos<br>
+            <a href="https://portugues.witness.org/portfolio_page/guia-rapido-para-preservacao-digital-de-videos/">https://portugues.witness.org/portfolio_page/guia-rapido-para-preservacao-digital-de-videos/</a></li>
+    
+        <li>PREMIS – Understanding PREMIS (Português)<br>
+            <a href="https://loc.gov/standards/premis/understandingPREMIS_portuguese_2021.pdf">https://loc.gov/standards/premis/understandingPREMIS_portuguese_2021.pdf</a></li>
+    
+        <li>Coalizão para a Preservação Digital (DPC - Digital Preservation Coalition) – Manual de Preservação Digital<br>
+            <a href="https://www.dpconline.org/handbook">https://www.dpconline.org/handbook</a></li>
     </ul>
+    
+    <ul>
+        <u>Normativas e padrões</u>
+    
+        <li>SPECTRUM 4.0 – Padrão internacional de gestão de coleções (PT-BR)<br>
+            <a href="https://spectrum-pt.org/wp-content/uploads/2021/03/Spectrum_PT_NET.pdf">https://spectrum-pt.org/wp-content/uploads/2021/03/Spectrum_PT_NET.pdf</a></li>
+    
+        <li>NOBRADE – Norma Brasileira de Descrição Arquivística (CONARQ)<br>
+            <a href="https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/nobrade.pdf">https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/nobrade.pdf</a></li>
+    
+        <li>OAIS – Modelo de Referência para Sistema Aberto de Arquivamento de Informação (ISO 14721)<br>
+            Página oficial ISO: <a href="https://www.iso.org/standard/57284.html">https://www.iso.org/standard/57284.html</a><br>
+            <em>*Traduções e sínteses em português podem ser encontradas em repositórios institucionais, como da USP e do Arquivo Nacional.</em></li>
+    
+        <li>Dublin Core - Padrão de elementos de metadados simples usado para descrever recursos digitais e físicos.<br>
+            <a href="https://www.dublincore.org/">https://www.dublincore.org/</a></li>
+    </ul>
+    
+    <ul>
+        <u>Manuais e cursos</u>
+    
+        <li>Manual “Acervos Digitais nos Museus” – IBRAM.<br>
+            <a href="https://www.museus.gov.br/wp-content/uploads/2021/05/Acervos-Digitais-nos-Museus.pdf">https://www.museus.gov.br/wp-content/uploads/2021/05/Acervos-Digitais-nos-Museus.pdf</a></li>
+
+        <li>Museu Portátil – Manual (Edição de Bolso).<br>
+            <a href="https://pt.wikipedia.org/wiki/Ficheiro:Museu_Portatil_Edi%C3%A7%C3%A3o_de_Bolso_Manual_2022.pdf">https://pt.wikipedia.org/wiki/Ficheiro:Museu_Portatil_Edi%C3%A7%C3%A3o_de_Bolso_Manual_2022.pdf</a></li>
+    
+        <li>Curso – Acervos Digitais nos Museus (EVG).<br>
+            <a href="https://www.escolavirtual.gov.br/curso/908">https://www.escolavirtual.gov.br/curso/908</a></li>
+    
+    </ul>
+
+    <ul>
+        <u>Políticas de preservação digital</u>
+
+        <li>Pinacoteca do Estado de São Paulo – Política de Preservação (2019).<br>
+            <a href="https://pinacoteca.org.br/wp-content/uploads/2022/07/Politica-de-Preservacao-2019.pdf">https://pinacoteca.org.br/wp-content/uploads/2022/07/Politica-de-Preservacao-2019.pdf</a></li>
+
+        <li>Arquivo Nacional – Recomendações para Política de Preservação Digital.<br>
+            <a href="https://www.gov.br/arquivonacional/pt-br/servicos/gestao-de-documentos/orientacao-tecnica-1/recomendacoes-tecnicas-1/politica_presercacao_digital.pdf">https://www.gov.br/arquivonacional/pt-br/servicos/gestao-de-documentos/orientacao-tecnica-1/recomendacoes-tecnicas-1/politica_presercacao_digital.pdf</a></li>
+
+    
+    <ul>
+        <u>Referências em outras línguas</u>
+
+        <li>Library of Congress – Recommended Formats Statement (2025–2026)
+            A Recommended Formats Statement lista formatos preferenciais para longo prazo, por tipo de material.<br>
+            <a href="https://loc.gov/preservation/resources/rfs/">https://loc.gov/preservation/resources/rfs/</a></li>
+         
+        <li>The Theory and Craft of Digital Preservation – Trevor Owens (2018)
+            Obra introdutória e prática sobre princípios e implementação de preservação digital. <br>
+            <a href="https://osf.io/preprints/lissa/rry2x/">https://osf.io/preprints/lissa/rry2x/</a></li>
+              
+    </ul>
+
+    <h3>Softwares, ferramentas e plataformas</h3>
+
+    <p>Tivemos nesta seleção preferência por ferramentas estáveis, amplamente utilizadas em instituições de memória, com documentação confiável, idealmente em distribuição de código-livre (open-source), e que permitam reprodutibilidade dos processos.</p>
+
+    <ul>
+        <u>Identificação / análise de formatos</u>
+
+        <li>DROID (Linux/macOS/Windows – identificação automática de formatos)</li>
+        <li>MediaInfo (Linux/macOS/Windows – leitura de propriedades técnicas de arquivos áudio/audiovisual)</li>
+    </ul>
+   
+    <ul>
+        <u>Captura/gravação de metadados</u>
+
+        <li>Proofmode (Android/iOS)</li>
+        <li>Tella (Android/iOS)</li>
+    </ul>
+
+    <ul>
+        <u>Leitura/inclusão de metadados</u>
+
+        <li>Exiftool (macOS/Windows)</li>
+        <li>MediaInfo (Linux/macOS/Windows)</li>
+    </ul>
+
+    <ul>
+        <u>Hashing / verificação de integridade</u>
+
+        <li>MD5Checker (Windows)</li>
+        <li>Hash Droid (Android)</li>
+        <li>MD5 (macOS)</li>
+        <li>QuickHash (Linux/macOS/Windows)</li>
+        <li>TeraCopy (macOS/Windows)</li>
+    </ul>
+
+    <ul>
+        <u>Cópia / migração de arquivos / sincronização</u>
+
+        <li>Robocopy (Windows)</li>
+        <li>Rsync (Linux/macOS)</li>
+        <li>TeraCopy (macOS/Windows)</li>
+    </ul>
+
+    <ul>
+        <u>Empacotamento / preparação para preservação</u>
+
+        <li>BagIt (Linux/macOS/Windows)</li>
+        <li>Bagger (Linux/macOS/Windows)</li>
+        <li>Exactly (macOS/Windows)</li>
+    </ul>
+
+    <ul>
+        <u>Catalogação / acesso / publicação de acervos</u>
+
+        <li>Tainacan (WordPress)</li>
+        <li>Mukurtu (Drupal)</li>
+        <li>Mukurtu (Drupal)</li>
+        <li>Uwazi (Linux ou hospedado)</li>
+        <li>Páramo (PHP e MySQL)</li>
+    </ul>
+
+    <ul>
+        <u>Conversão de arquivos</u>
+
+        <li>Audacity (áudio)</li>
+        <li>Fmpeg (audiovisual)</li>
+    </ul>
+
+    <p>O Museu da Pessoa é um museu virtual e colaborativo que desde 1991 se dedica a preservar e disseminar histórias de vidas de toda e qualquer pessoa. Para desenvolver este material, contou com a parceria da WITNESS,  organização global que auxilia pessoas a usar a tecnologia audiovisual para contar suas histórias, e em defesa dos direitos humanos.</p>
+        <p>Conheça mais em:</p>
+
+        <p><a href="museudapessoa.org"> museudapessoa.org</a></p>
+        <p><a href="portugues.witness.org/brazil/">portugues.witness.org/brazil/</a></p>
+
 </section>
 
 <section class="ficha-tecnica">
     <h2>Ficha Técnica</h2>
     <p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
+    <p><strong>Coordenação da Produção:</strong> Marcos Terra</p>
     <p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
+    <p><strong>Consultoria Técnica:</strong> WITNESS</p>
+    <p><strong>Revisão Técnica:</strong> Ines Aisengart Menezes</p>
     <p><strong>Projeto Gráfico:</strong> Mariana Afonso</p>
+    <p><strong>Web desenvolvimento:</strong>Elsa Villon</p>
+    <p><strong><u>Museu da Pessoa</u></strong></p>
+    <p><strong>Associados:></strong> Associados Ana Wilheim | Carla Nóbrega | Carlos Seabra | Carolina Misorelli | Celia Picon | Cláudia Leonor | Elza Lobo (in memorian) | Fernando Von Oertzen | Heloísa Nogueira | Immaculada Prieto | Iris Kantor | José Santos Matos | José Guilherme Mauger | Karen Worcman | Luiz Egypto de Cerqueira | Marcia Trezza | Maria Francisca dos Santos e Passos | Mauro Malin | Roberto da Silva (in memorian)| Rosali Nunes Henriques | Rosana Miziara | Sandra Sinicco | Sergio Ajzenberg (in memoriam) | Sonia London | Silvia Carvalho | Zilda Kessel </p>
+    <p><strong>Conselho Diretor:</strong>Conselho Diretor Karen Worcman (Presidente) | Beatriz Azeredo | Denise Barbosa | Jairo Duarte | Maria Francisca dos Santos e Passos | Marcos Oliveira | Tom Mendes </p>
+    <p><strong>Conselho Fiscal:</strong>José Guilherme Mauger | Leandro Salatti | Antonio Salles</p>
+    <p><strong>Conselho Honorário:</strong>Alberto Dines (in memoriam) | Celia Picon | Danilo Miranda (in memoriam) | Eliezer Batista (in memoriam) | José Eduardo Bandeira de Mello  | Lisandra Alves | Octavio Barros | Paul Thompson | Paulo Nassar | Roberto da Silva (in memoriam) | Tom Gillespie | Wellington Nogueira</p>
+    <p><strong>Comitê Gestor:</strong>Beatriz Azeredo | Carla Nobrega | Gustavo Gonzaga | Tiago Lara</p>
+    <p><strong>Comitê de Compliance:</strong>Cynara Reinert | José Guilherme Mauger | Luiz Egypto de Cerqueira| Maria Francisca Passos</p>
+    <p><strong>Comitê Curatorial:</strong>Bel Santos Mayer | Barbara Trugillo | Paulo Endo</p>
+    <p><strong>Direção Executiva:</strong>Karen Worcman | Marcos Terra</p>
+    <p><strong>Relações Institucionais e Governamentais:</strong>Rosana Miziara | Anna Miranda</p>
+    <p><strong>Museologia:</strong>Lucas Lara | Felipe Rocha | Renata Pante | Beatriz Saghaard | Teresa de Carvalho | Paola Valentina Xavier | Priscila Gomes | Estfani da Costa | Jefferson Trindade | Charles Pankararu | Nicolau da Conceição | Grace Jacobson</p>
+    <p><strong>Colaboração:</strong>Marcela Lanza Tripoli | Marcia Trezza | Jonas Samaúma | Aline Scolfaro | Sônia Helena London | Levi Andrade</p>
+    <p><strong>Museu Digital:</strong>Odilon Gonçalves | Amanda Lira | Isadora Catem Santos | Leandro Almeida | Thiago Magalhães | Ariane Permonian | Ana Gomes | Milena López</p>
+    <p><strong>Gestão e Operação:</strong>Allan Russo Fava | Dalci Alves da Silva | Eduardo Valente | Juliana Gervaes | Larissa Pinna | Lucas Torigoe | Ane Alves | Bruna Gelangauskas | Lynda Dixon | Alice Silva | Luiza Gallo | Bruna Ghirardello | Samantha Xavier | Sofia Petro</p>
+
+
 </section>
 
 <footer>
     <p class="small-text">
-        Este material foi realizado com recursos do Programa de Ação Cultural – ProAC.
+        Este material e as demais ações deste projeto foram realizados com recursos por meio do Programa de Ação Cultural – ProAC, da Secretaria da Cultura, Economia e Indústria Criativas do Governo do Estado de São Paulo.
     </p>
 </footer>
 
