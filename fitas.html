@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -12,51 +11,27 @@
 
     <!-- CSS externo -->
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        body {
-            margin: 40px auto;
-            padding: 0 20px;
-            max-width: 900px;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        h1, h2, h3 {
-            margin-top: 40px;
-        }
-
-        ul {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .referencias {
-            margin-top: 40px;
-        }
-
-        .ficha-tecnica {
-            margin-top: 40px;
-            line-height: 1.8;
-        }
-
-        .ficha-tecnica strong {
-            display: block;
-            margin-top: 15px;
-        }
-    </style>
 </head>
 
 <body>
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<div class="overlay" onclick="toggleMenu()"></div>
+
+<nav class="side-menu">
+    <ul>
+        <li><a href="#inicio" onclick="toggleMenu()">Por que preservar fitas magnéticas?</a></li>
+        <li><a href="#formatos" onclick="toggleMenu()">Diferentes formatos</a></li>
+        <li><a href="#caracteristicas" onclick="toggleMenu()">Características</a></li>
+        <li><a href="#cuidados" onclick="toggleMenu()">Cuidados e manuseio</a></li>
+        <li><a href="#degradacao" onclick="toggleMenu()">Fatores de degradação e condições de armazenamento</a></li>
+        <li><a href="#preservacao" onclick="toggleMenu()">Práticas de preservação</a></li>
+        <li><a href="#referencias" onclick="toggleMenu()">Referências</a></li>
+        <li><a href="#ficha-tecnica" onclick="toggleMenu()">Ficha Técnica</a></li>
+    </ul>
+</nav>
+
+<main id="inicio">
 
     <h1>Por que preservar as fitas magnéticas?</h1>
 
@@ -66,7 +41,8 @@
     
     <p>Visando contribuir para a preservação destes suportes, esta cartilha irá apresentar os principais fatores de deterioração das fitas magnéticas e algumas boas práticas que auxiliam pessoas, grupos ou organizações que precisem lidar com este tipo de coleção, considerando que o conhecimento especializado necessário para manusear e preservar os formatos de fita magnética também se tornam mais escassos com o passar dos anos.</p>
 
-    <h2>Diferentes formatos</h2>
+
+    <h2 id="formatos">Diferentes formatos</h2>
 
     <p>Há uma grande diversidade de formatos entre os meios magnéticos. Uma parte essencial do trabalho de preservação destes suportes é conhecer as especificidades destes diferentes formatos e suas compatibilidades/incompatibilidades, evitando danos durante o processo:</p>
     <ul>
@@ -75,7 +51,7 @@
         <li><strong>Formatos digitais em cassete:</strong> D1, D2, D3, D5, D6, D9, DVC Pro, Digital8, Digital Betacam, DVCAM, MiniDV.</li>
     </ul>
 
-    <h2>Características e vulnerabilidades das fitas magnéticas</h2>
+    <h2 id="caracteristicas">Características e vulnerabilidades das fitas magnéticas</h2>
 
     <p>Mesmo armazenadas em condições ideais, as fitas magnéticas têm vida útil limitada e são suscetíveis à deterioração por diversos fatores. Conhecer os componentes materiais das fitas é importante para garantir a sua preservação. As fitas magnéticas podem ter diferentes formatos e composições químicas (óxidos metálicos, dióxido de cromo, partículas metálicas), sendo os seus principais componentes físicos:</p>
     <ul>
@@ -96,7 +72,7 @@
 
     <p>É importante reforçar o caráter de marcador temporal deste tipo de suporte: a qualidade da imagem e som em vídeo é reflexo de sua época, dos equipamentos de gravação. Preservar estes materiais significa guardar conteúdos, lugares e tempos específicos, que podem ser acessados e aproveitados por gerações posteriores.</p>
 
-    <h2>Cuidados e manuseio</h2>
+    <h2 id="cuidados">Cuidados e manuseio</h2>
 
     <p>
         Assim como objetos e documentos que consideramos valiosos, as fitas magnéticas devem ser tratadas com atenção, exigindo manuseio cuidadoso, limpeza e bom senso:
@@ -113,7 +89,7 @@
         <li>o manuseio, sempre deve ser considerado para a equipe o uso de equipamentos de proteção tais como máscaras, luvas de nitrilo, óculos de segurança e jaleco.</li>
     </ul>
 
-    <h2>Fatores de degradação e condições de armazenamento</h2>
+    <h2 id="degradacao">Fatores de degradação e condições de armazenamento</h2>
 
     <p>Como apontamos anteriormente, as mídias magnéticas são suportes frágeis, sujeitas a danos por diversos fatores e, principalmente, pela obsolescência dos formatos e falta de peças de reposição devido à interrupção da fabricação pela indústria, colocando-as numa posição de risco extremo. Alguns dos principais fatores de degradação são:</p>
     
@@ -123,7 +99,7 @@
         <li>Poeira, sujeira, luz solar, campos magnéticos fortes.</li>
         <li>Obsolescência de formatos e gravadores.</li>
         <li>Manutenção escassa ou inadequada.</li>
-        <li>Uso excessivo ou manuseio inadequado./li>
+        <li>Uso excessivo ou manuseio inadequado.</li>
     </ul>
 
     <p>Para mitigar estes fatores, é fundamental que as mídias estejam em condições adequadas de armazenamento, garantindo uma vida útil mais ampla:</p>
@@ -134,9 +110,7 @@
         <li>Separação: Fitas com problemas (mofo, Síndrome do Vinagre) devem ser isoladas para evitar contaminação.</li>
     </ul>
 
-
-
-    <h2>Práticas de preservação</h2>
+    <h2 id="preservacao">Práticas de preservação</h2>
 
     <p>identificação, inventário, diagnóstico, catalogação, acondicionamento, limpeza, manutenção e, como ressalta o arquivista audiovisual Ray Edmondson, o acesso: “preservação e acesso são duas faces da mesma moeda”.</p>
 
@@ -158,7 +132,7 @@
     </ul>
 
 
-<section class="referencias">
+<section class="referencias" id="referencias">
         <h2>Referências</h2>
         <p><strong>JIMENEZ, M.; PLATT, L.</strong> <em>Video Tape Identification and Assessment Guide</em>. Texas: Texas Commission on the Arts, 2004.</p>
         <p><strong>VAN BOGART, John W. C.</strong> <em>Armazenamento e manuseio de fitas magnéticas</em>. Rio de Janeiro: Arquivo Nacional, 2001. Disponível em: <a href="https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf" target="_blank">https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf</a>. Acesso em: <strong>17 nov. 2025</strong>.</p>
@@ -173,7 +147,7 @@
 
 </section>
 
-<section class="ficha-tecnica">
+<section class="ficha-tecnica" id="ficha-tecnica">
 
 <h2>Ficha Técnica</h2>
 <p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
@@ -181,11 +155,11 @@
 <p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
 <p><strong>Consultoria Técnica:</strong> WITNESS</p>
 <p><strong>Revisão Técnica:</strong> Ines Aisengart Menezes</p> 
-    <p></p>Mariela Cantú</p>
+    <p>Mariela Cantú</p>
 <p><strong>Projeto Gráfico:</strong> Mariana Afonso</p>
 <p><strong>Web desenvolvimento:</strong>Elsa Villon</p>
 <p><strong><u>Museu da Pessoa</u></strong></p>
-<p><strong>Associados:></strong>Ana Wilheim | Carla Nóbrega | Carlos Seabra | Carolina Misorelli | Celia Picon | Cláudia Leonor | Elza Lobo (in memorian) | Fernando Von Oertzen | Heloísa Nogueira | Immaculada Prieto | Iris Kantor | José Santos Matos | José Guilherme Mauger | Karen Worcman | Luiz Egypto de Cerqueira | Marcia Trezza | Maria Francisca dos Santos e Passos | Mauro Malin | Roberto da Silva (in memorian)| Rosali Nunes Henriques | Rosana Miziara | Sandra Sinicco | Sergio Ajzenberg (in memoriam) | Sonia London | Silvia Carvalho | Zilda Kessel </p>
+<p><strong>Associados:</strong>Ana Wilheim | Carla Nóbrega | Carlos Seabra | Carolina Misorelli | Celia Picon | Cláudia Leonor | Elza Lobo (in memorian) | Fernando Von Oertzen | Heloísa Nogueira | Immaculada Prieto | Iris Kantor | José Santos Matos | José Guilherme Mauger | Karen Worcman | Luiz Egypto de Cerqueira | Marcia Trezza | Maria Francisca dos Santos e Passos | Mauro Malin | Roberto da Silva (in memorian)| Rosali Nunes Henriques | Rosana Miziara | Sandra Sinicco | Sergio Ajzenberg (in memoriam) | Sonia London | Silvia Carvalho | Zilda Kessel </p>
 <p><strong>Conselho Diretor:</strong> Karen Worcman (Presidente) | Beatriz Azeredo | Denise Barbosa | Jairo Duarte | Maria Francisca dos Santos e Passos | Marcos Oliveira | Tom Mendes</p>
 <p><strong>Conselho Fiscal:</strong>José Guilherme Mauger | Leandro Salatti | Antonio Salles</p>
 <p><strong>Comitê Honorário:</strong>Alberto Dines (in memoriam) | Celia Picon | Danilo Miranda (in memoriam) | Eliezer Batista (in memoriam) | José Eduardo Bandeira de Mello  | Lisandra Alves | Octavio Barros | Paul Thompson | Paulo Nassar | Roberto da Silva (in memoriam) | Tom Gillespie | Wellington Nogueira</p>
@@ -211,5 +185,12 @@
 
 </main>
 
+<script>
+    function toggleMenu() {
+        document.querySelector('.side-menu').classList.toggle('active');
+        document.querySelector('.overlay').classList.toggle('active');
+    }
+    </script>
+    
 </body>
 </html>

@@ -1,26 +1,42 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O que é preservação digital?</title>
+    <title>Por que preservar as fitas magnéticas?</title>
 
-    <!-- Pré-carregamento das fontes -->
-    <link rel="preload" href="fonts/Gilroy-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Pré-carregamento da fonte -->
     <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Gilroy-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
+    <!-- CSS externo -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<main>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<div class="overlay" onclick="toggleMenu()"></div>
+    
+<nav class="side-menu">
+    <ul>
+        <li><a href="#inicio" onclick="toggleMenu()">O que é preservação digital?</a></li>
+        <li><a href="#integridade" onclick="toggleMenu()">Integridade</a></li>
+        <li><a href="#backup" onclick="toggleMenu()">Backup de dispositivos</a></li>
+        <li><a href="#gestao" onclick="toggleMenu()">Gestão de metadados e catalogação</a></li>
+        <li><a href="#preservacao" onclick="toggleMenu()">Preservação de conteúdos</a></li>
+        <li><a href="#armazenamento" onclick="toggleMenu()">Armazenamento</a></li>
+        <li><a href="#referencias" onclick="toggleMenu()">Referências</a></li>
+        <li><a href="#softwares"onclick="toggleMenu()">Softwares, ferramentas e plataformas</a></li>
+        <li><a href="#ficha-tecnica" onclick="toggleMenu()">Ficha Técnica</a></li>
+    </ul>
+</nav>
 
 <header>
-    <h1>O que é preservação digital?</h1>
+    <h1 id="inicio">O que é preservação digital?</h1>
 </header>
+
+<main>
 
 <section>
     <p>É comum associarmos segurança ou preservação de arquivos digitais com práticas de <i>backup</i>. No entanto, embora o <i>backup</i> seja uma parte fundamental, a preservação digital não se limita apenas a esta prática</p>
@@ -34,7 +50,8 @@
 </section>
 
 <section>
-    <h2>Integridade</h2>
+
+    <h2 id="integridade">Integridade</h2>
 
     <p>É fundamental garantir a transferência de arquivos sem qualquer alteração ou compressão. Para demonstrar que este processo se deu de forma segura, é importante acompanhar detalhadamente a cópia dos arquivos, se possível verificando as suas <i>hashes</i>.</p>
 
@@ -42,7 +59,7 @@
 </section>
 
 <section>
-    <h2>Backup de dispositivos</h2>
+    <h2 id="backup">Backup de dispositivos</h2>
 
     <p>Quanto à cópia, é importante definir que tipo de cópia será o ideal para cada caso. Embora relacionados, <u>imagem de disco</u> e <u>cópia lógica</u> são conceitos diferentes. Uma imagem de disco é uma cópia bit a bit de um disco rígido ou partição, incluindo todos os dados (mesmo excluídos ou não alocados) e a estrutura do disco. Já uma cópia lógica copia apenas os arquivos visíveis e acessíveis pelo sistema operacional, ignorando dados não alocados e a estrutura física do disco:</p>
 
@@ -78,7 +95,7 @@
 
     <p>Ao realizar uma cópia lógica é importante utilizar ferramentas que possam criar e verificar as <i>hashes</i>, tais como o <strong>Robocopy</strong> (utilitários do Windows), <strong>Rsync</strong> (Linux, macOS) ou <strong>TeraCopy</strong> (macOS, Windows).</p>
     
-    <p></p>É importante verificar a compatibilidade do armazenamento utilizado com o sistema operacional do computador (Windows, macOS, Linux). O sistema de arquivos configurado afeta a compatibilidade, o desempenho e o tamanho máximo dos arquivos:</p>
+    <p>É importante verificar a compatibilidade do armazenamento utilizado com o sistema operacional do computador (Windows, macOS, Linux). O sistema de arquivos configurado afeta a compatibilidade, o desempenho e o tamanho máximo dos arquivos:</p>
 
     <ul>
         <li><strong>Windows + macOS</strong>: use exFAT (melhor equilíbrio).</li>
@@ -129,7 +146,7 @@
 </section>
 
 <section>
-    <h2>Gestão de metadados e catalogação</h2>
+    <h2 id="gestao">Gestão de metadados e catalogação</h2>
 
     <p>A definição mais simples sobre metadados que podemos encontrar é: metadados são dados sobre dados. Embora isso possa parecer abstrato, na prática é algo bastante concreto, se considerarmos uma faixa musical como exemplo os metadados seriam o/a artista, a data de lançamento, a duração, os créditos de publicação e composição, o tamanho do arquivo, entre outros. São informações que não consistem na música em si ou em seu conteúdo, mas apresentam detalhes importantes para classificar a obra e dar contexto a ela.</p>
 
@@ -144,7 +161,7 @@
 </section>
 
 <section>
-    <h2>Preservação dos conteúdos</h2>
+    <h2 id="preservacao">Preservação dos conteúdos</h2>
 
     <p> Ao se preservar um arquivo digital não adianta preservar apenas a sua estrutura (bits), mas também as formas de acessá-los e de garantir sua leitura. Neste sentido, preservar aqui significa, essencialmente, permitir que estes arquivos permaneçam no tempo. É essencial criar estratégias e instrumentos que permitam sua localização, seu uso e o crescimento ordenado dos conteúdos. </p>
 
@@ -174,7 +191,7 @@
 </section>
 
 <section>
-    <h2>Armazenamento</h2>
+    <h2 id="armazenamento">Armazenamento</h2>
 
     <p>Entretanto, independentemente do tipo de mídia ou dispositivo utilizado, nenhum durará para sempre. A vida útil real de uma mídia depende de muitos fatores, como seu ambiente e uso. Boas práticas de armazenamento digitais consideram a escolha de armazenamento, backup constante e monitoramento ativo apropriados.</p>
 
@@ -189,7 +206,7 @@
 <hr>
 
 <section class="referencias">
-    <h2>Referências</h2>
+    <h2 id="referencias">Referencias</h2>
 
     <ul>
         <u>Conceitos gerais & guias</u>
@@ -253,7 +270,7 @@
 
         <li>Library of Congress – Recommended Formats Statement (2025–2026)
             A Recommended Formats Statement lista formatos preferenciais para longo prazo, por tipo de material.<br>
-            <a href="https://loc.gov/preservation/resources/rfs/">https://loc.gov/preservation/resources/rfs/</a></li>
+            ]<a href="https://www.loc.gov/preservation/resources/rfs/index.html">https://www.loc.gov/preservation/resources/rfs/index.html</a></li>
          
         <li>The Theory and Craft of Digital Preservation – Trevor Owens (2018)
             Obra introdutória e prática sobre princípios e implementação de preservação digital. <br>
@@ -261,8 +278,8 @@
               
     </ul>
 
-    <h3>Softwares, ferramentas e plataformas</h3>
-
+    <h2 id="softwares">Softwares, ferramentas e plataformas</h2>
+   
     <p>Tivemos nesta seleção preferência por ferramentas estáveis, amplamente utilizadas em instituições de memória, com documentação confiável, idealmente em distribuição de código-livre (open-source), e que permitam reprodutibilidade dos processos.</p>
 
     <ul>
@@ -338,7 +355,7 @@
 </section>
 
 <section class="ficha-tecnica">
-    <h2>Ficha Técnica</h2>
+    <h2 id="ficha-tecnica">Ficha Técnica</h2>
     <p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
     <p><strong>Coordenação da Produção:</strong> Marcos Terra</p>
     <p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
@@ -372,5 +389,47 @@
 
 </main>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const toggleButton = document.querySelector(".menu-toggle");
+    const overlay = document.querySelector(".overlay");
+    const menu = document.querySelector(".side-menu");
+    const links = document.querySelectorAll(".side-menu a");
+
+    function openMenu() {
+        menu.classList.add("active");
+        overlay.classList.add("active");
+        menu.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        menu.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    function toggleMenu() {
+        menu.classList.contains("active") ? closeMenu() : openMenu();
+    }
+
+    toggleButton.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", closeMenu);
+
+    links.forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+    });
+
+});
+</script>
+
+</body>
+</html>
 </body>
 </html>
