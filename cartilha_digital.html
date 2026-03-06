@@ -13,23 +13,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="cartilha">
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="menu-lateral"
+    onclick="toggleMenu()">
+☰
+</button>
+
 <div class="overlay" onclick="toggleMenu()"></div>
-    
-<nav class="side-menu">
-    <ul>
-        <li><a href="#inicio" onclick="toggleMenu()">O que é preservação digital?</a></li>
-        <li><a href="#integridade" onclick="toggleMenu()">Integridade</a></li>
-        <li><a href="#backup" onclick="toggleMenu()">Backup de dispositivos</a></li>
-        <li><a href="#gestao" onclick="toggleMenu()">Gestão de metadados e catalogação</a></li>
-        <li><a href="#preservacao" onclick="toggleMenu()">Preservação de conteúdos</a></li>
-        <li><a href="#armazenamento" onclick="toggleMenu()">Armazenamento</a></li>
-        <li><a href="#referencias" onclick="toggleMenu()">Referências</a></li>
-        <li><a href="#softwares"onclick="toggleMenu()">Softwares, ferramentas e plataformas</a></li>
-        <li><a href="#ficha-tecnica" onclick="toggleMenu()">Ficha Técnica</a></li>
-    </ul>
+
+<nav id="menu-lateral" class="side-menu" role="navigation" aria-label="Menu da página">
+<ul>
+
+    <li><a href="#inicio">O que é preservação digital?</a></li>
+    <li><a href="#integridade">Integridade</a></li>
+    <li><a href="#backup">Backup de dispositivos</a></li>
+    <li><a href="#gestao">Gestão de metadados e catalogação</a></li>
+    <li><a href="#preservacao">Preservação de conteúdos</a></li>
+    <li><a href="#armazenamento">Armazenamento</a></li>
+    <li><a href="#referencias">Referências</a></li>
+    <li><a href="#softwares">Softwares, ferramentas e plataformas</a></li>
+    <li><a href="#ficha-tecnica">Ficha técnica</a></li>
+
+</ul>
 </nav>
 
 <header>
@@ -206,7 +215,7 @@
 <hr>
 
 <section class="referencias">
-    <h2 id="referencias">Referencias</h2>
+    <h2 id="referencias">Referências</h2>
 
     <ul>
         <u>Conceitos gerais & guias</u>

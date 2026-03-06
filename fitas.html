@@ -13,24 +13,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="fitas">
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="menu-lateral"
+    onclick="toggleMenu()">
+☰
+</button>
+
 <div class="overlay" onclick="toggleMenu()"></div>
 
-<nav class="side-menu">
-    <ul>
-        <li><a href="#inicio" onclick="toggleMenu()">Por que preservar fitas magnéticas?</a></li>
-        <li><a href="#formatos" onclick="toggleMenu()">Diferentes formatos</a></li>
-        <li><a href="#caracteristicas" onclick="toggleMenu()">Características</a></li>
-        <li><a href="#cuidados" onclick="toggleMenu()">Cuidados e manuseio</a></li>
-        <li><a href="#degradacao" onclick="toggleMenu()">Fatores de degradação e condições de armazenamento</a></li>
-        <li><a href="#preservacao" onclick="toggleMenu()">Práticas de preservação</a></li>
-        <li><a href="#referencias" onclick="toggleMenu()">Referências</a></li>
-        <li><a href="#ficha-tecnica" onclick="toggleMenu()">Ficha Técnica</a></li>
-    </ul>
-</nav>
+<nav id="menu-lateral" class="side-menu" role="navigation" aria-label="Menu da página">
+<ul>
+    <li><a href="#inicio">Por que preservar fitas magnéticas?</a></li>
+    <li><a href="#formatos">Diferentes formatos</a></li>
+    <li><a href="#caracteristicas">Características</a></li>
+    <li><a href="#cuidados">Cuidados e manuseio</a></li>
+    <li><a href="#degradacao">Fatores de degradação e condições de armazenamento</a></li>
+    <li><a href="#preservacao">Práticas de preservação</a></li>
+    <li><a href="#referencias">Referências</a></li>
+    <li><a href="#ficha-tecnica">Ficha técnica</a></li>
 
+</ul>
+</nav>
 <main id="inicio">
 
     <h1>Por que preservar as fitas magnéticas?</h1>
