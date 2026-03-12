@@ -11,6 +11,19 @@
   --table-border: #ddd;
 }
 
+/* =========================
+   CORES POR PÁGINA
+========================= */
+
+body.fitas {
+  --accent-color: #243c24;
+  --menu-accent: #a2b648;
+}
+
+body.cartilha {
+  --accent-color: #934bea;
+  --menu-accent: #934bea;
+}
 
 /* =========================
    FONTES
@@ -52,14 +65,25 @@
   font-display: swap;
 }
 
-
 /* =========================
    BASE
 ========================= */
 
 html {
-  font-size: 100%;
   scroll-behavior: smooth;
+}
+
+/* Respeitar preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -74,29 +98,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
-/* =========================
-   CORES POR PÁGINA
-========================= */
-
-body.fitas {
-  --accent-color: #a2b648;
-  --menu-accent: #789c41;
-}
-
-body.cartilha {
-  --accent-color: #934bea;
-  --menu-accent: #934bea;
-}
-
-
 /* =========================
    TIPOGRAFIA
 ========================= */
 
 p {
   margin-bottom: 1rem;
-  text-align: justify;
 }
 
 strong {
@@ -116,8 +123,21 @@ h1 {
 h2,
 h3 {
   color: var(--accent-color);
+  margin-top: 1.5rem;
 }
 
+/* Classe para esconder visualmente mas manter para leitores de tela */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* =========================
    LISTAS
@@ -132,10 +152,29 @@ li {
   margin-bottom: 0.625rem;
 }
 
+/* Listas de definição (dl) */
+dl {
+  margin-bottom: 1.25rem;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  padding-left: 41px; /* Alinhamento com o texto após o ícone */
+}
 
 /* =========================
    TABELAS
 ========================= */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -150,6 +189,7 @@ caption {
   text-align: left;
   font-weight: 700;
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 th,
@@ -162,6 +202,7 @@ td {
 
 thead th {
   background: #f4c4d7;
+  font-weight: 700;
 }
 
 tbody tr:nth-child(even) {
@@ -170,6 +211,13 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
   background: #f0d4e0;
+}
+
+/* Melhor contraste para foco em células */
+th:focus,
+td:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: -2px;
 }
 
 /* =========================
@@ -184,6 +232,16 @@ tbody tr:hover {
   font-size: 0.95rem;
 }
 
+.referencias h2,
+.referencias h3 {
+  margin-top: 1.5rem;
+}
+
+.referencias h2:first-child,
+.referencias h3:first-child {
+  margin-top: 0;
+}
+
 .ficha-tecnica {
   background: #f4f4f4;
   padding: 25px;
@@ -193,10 +251,15 @@ tbody tr:hover {
   font-size: 0.9rem;
 }
 
-.ficha-tecnica h2 {
+.ficha-tecnica h2,
+.ficha-tecnica h3 {
   margin-top: 0;
-  border: none;
   color: var(--heading-color);
+}
+
+.ficha-tecnica h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .ficha-tecnica strong {
@@ -204,7 +267,6 @@ tbody tr:hover {
   margin-top: 10px;
   color: var(--heading-color);
 }
-
 
 /* =========================
    LINKS
@@ -226,6 +288,12 @@ a:focus {
   outline-offset: 2px;
 }
 
+/* Links externos - indicador visual opcional */
+a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.8em;
+  vertical-align: super;
+}
 
 /* =========================
    ELEMENTOS
@@ -237,13 +305,32 @@ hr {
   margin: 30px 0;
 }
 
+/* Código inline */
+code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+/* Abreviações */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
 /* =========================
-   IMAGENS
+   IMAGENS E SVG
 ========================= */
 
-img {
-  width: 100%;
+img,
+svg {
+  max-width: 100%;
   height: auto;
+}
+
+img {
   display: block;
   margin: 20px 0;
 }
@@ -251,9 +338,10 @@ img {
 .img-50 {
   width: 35px;
   height: 35px;
-  display: inline;
+  display: inline-block;
   margin: 0 6px 0 0;
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
 /* =========================
@@ -271,10 +359,40 @@ img {
   z-index: 1001;
   color: var(--menu-accent);
   transition: transform 0.3s ease;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle:hover {
   transform: scale(1.1);
+}
+
+.menu-toggle:focus {
+  outline: 3px solid var(--menu-accent);
+  outline-offset: 2px;
+}
+
+/* Overlay para fechar menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .side-menu {
@@ -285,7 +403,7 @@ img {
   height: 100vh;
   background: var(--menu-bg);
   padding: 80px 0 20px;
-  transition: left 0.35s cubic-bezier(0.77,0,0.18,1);
+  transition: left 0.35s cubic-bezier(0.77, 0, 0.18, 1);
   z-index: 1000;
   overflow-y: auto;
 }
@@ -314,16 +432,20 @@ img {
   line-height: 1.4;
   position: relative;
   transition: background 0.25s ease, padding-left 0.25s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
-
-/* hover */
 
 .side-menu a:hover {
   background: var(--menu-hover);
   padding-left: 30px;
 }
 
-/* barra lateral animada */
+.side-menu a:focus {
+  outline: 3px solid var(--menu-accent);
+  outline-offset: -3px;
+}
 
 .side-menu a::before {
   content: "";
@@ -342,8 +464,6 @@ img {
   transform: translateY(-50%) scaleX(1);
 }
 
-/* item ativo */
-
 .side-menu a.active {
   background: var(--menu-hover);
 }
@@ -352,7 +472,100 @@ img {
   transform: translateY(-50%) scaleX(1);
 }
 
+/* =========================
+   ÍCONES COM TEXTO
+========================= */
+
 .linha-icone {
   margin: 4px 0;
-  line-height: 1.2;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .menu-toggle {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .linha-icone {
+    flex-wrap: wrap;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* =========================
+   IMPRESSÃO
+========================= */
+
+@media print {
+  .menu-toggle,
+  .side-menu,
+  .overlay {
+    display: none;
+  }
+
+  body {
+    max-width: 100%;
+    margin: 0;
+    padding: 1cm;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* =========================
+   SKIP LINK (ACESSIBILIDADE)
+========================= */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }

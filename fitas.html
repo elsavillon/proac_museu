@@ -1,13 +1,14 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Por que preservar as fitas magnéticas?</title>
+    <meta name="description" content="Cartilha sobre preservação de fitas magnéticas - Museu da Pessoa">
+    <title>Por que preservar as fitas magnéticas? | Museu da Pessoa</title>
 
     <!-- Pré-carregamento da fonte -->
     <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- CSS externo -->
     <link rel="stylesheet" href="css/style.css">
@@ -15,188 +16,210 @@
 
 <body class="fitas">
 
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
     <button class="menu-toggle"
-    aria-label="Abrir menu"
-    aria-expanded="false"
-    aria-controls="menu-lateral"
-    onclick="toggleMenu()">
-☰
-</button>
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="menu-lateral"
+        onclick="toggleMenu()">
+        ☰
+    </button>
 
-<div class="overlay" onclick="toggleMenu()"></div>
+    <div class="overlay" onclick="toggleMenu()" aria-hidden="true"></div>
 
-<nav id="menu-lateral" class="side-menu" role="navigation" aria-label="Menu da página">
-<ul>
-    <li><a href="#inicio">Por que preservar fitas magnéticas?</a></li>
-    <li><a href="#formatos">Diferentes formatos</a></li>
-    <li><a href="#caracteristicas">Características</a></li>
-    <li><a href="#cuidados">Cuidados e manuseio</a></li>
-    <li><a href="#degradacao">Fatores de degradação e condições de armazenamento</a></li>
-    <li><a href="#preservacao">Práticas de preservação</a></li>
-    <li><a href="#referencias">Referências</a></li>
-    <li><a href="#ficha-tecnica">Ficha técnica</a></li>
+    <nav id="menu-lateral" class="side-menu" aria-label="Menu principal" aria-hidden="true">
+        <ul>
+            <li><a href="#inicio">Por que preservar fitas magnéticas?</a></li>
+            <li><a href="#formatos">Diferentes formatos</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#cuidados">Cuidados e manuseio</a></li>
+            <li><a href="#degradacao">Fatores de degradação</a></li>
+            <li><a href="#preservacao">Práticas de preservação</a></li>
+            <li><a href="#referencias">Referências</a></li>
+            <li><a href="#ficha-tecnica">Ficha técnica</a></li>
+        </ul>
+    </nav>
 
-</ul>
-</nav>
-<main id="inicio">
+    <main id="conteudo-principal">
 
-    <h1>Por que preservar as fitas magnéticas?</h1>
+        <h1 id="inicio">Por que preservar as fitas magnéticas?</h1>
 
-    <p>As fitas magnéticas foram meios de gravação e reprodução audiovisual que se popularizaram a partir dos anos 1970, principalmente com a introdução do sistema de videocassete doméstico no formato VHS. Com o avanço das tecnologias digitais (como os DVDs), este formatos foram sendo gradualmente substituídos e ficando obsoletos, com a descontinuidade de produção de equipamentos de gravação e reprodução, e o esquecimento de um grande volume de gravações deste período.</p>
+        <p>As fitas magnéticas foram meios de gravação e reprodução audiovisual que se popularizaram a partir dos anos 1970, principalmente com a introdução do sistema de videocassete doméstico no formato VHS. Com o avanço das tecnologias digitais (como os DVDs), estes formatos foram sendo gradualmente substituídos e ficando obsoletos, com a descontinuidade de produção de equipamentos de gravação e reprodução, e o esquecimento de um grande volume de gravações deste período.</p>
 
-    <p>O Projeto Alerta sobre Fitas Magnéticas (MTAP) foi uma iniciativa da UNESCO e da IASA que evidencia a perda deste patrimônio cultural. O alerta considera que por volta do ano de 2025 as máquinas de reprodução e aparelhos de gravação se tornam cada vez mais obsoletos ou indisponíveis, com peças de reposição escassas e cada vez menos especialistas técnicos capazes de mantê-los.</p>
-    
-    <p>Visando contribuir para a preservação destes suportes, esta cartilha irá apresentar os principais fatores de deterioração das fitas magnéticas e algumas boas práticas que auxiliam pessoas, grupos ou organizações que precisem lidar com este tipo de coleção, considerando que o conhecimento especializado necessário para manusear e preservar os formatos de fita magnética também se tornam mais escassos com o passar dos anos.</p>
+        <p>O Projeto Alerta sobre Fitas Magnéticas (<abbr title="Magnetic Tape Alert Project">MTAP</abbr>) foi uma iniciativa da <abbr title="Organização das Nações Unidas para a Educação, a Ciência e a Cultura">UNESCO</abbr> e da <abbr title="International Association of Sound and Audiovisual Archives">IASA</abbr> que evidencia a perda deste patrimônio cultural. O alerta considera que por volta do ano de 2025 as máquinas de reprodução e aparelhos de gravação se tornam cada vez mais obsoletos ou indisponíveis, com peças de reposição escassas e cada vez menos especialistas técnicos capazes de mantê-los.</p>
+        
+        <p>Visando contribuir para a preservação destes suportes, esta cartilha irá apresentar os principais fatores de deterioração das fitas magnéticas e algumas boas práticas que auxiliam pessoas, grupos ou organizações que precisem lidar com este tipo de coleção, considerando que o conhecimento especializado necessário para manusear e preservar os formatos de fita magnética também se tornam mais escassos com o passar dos anos.</p>
 
+        <h2 id="formatos">Diferentes formatos</h2>
 
-    <h2 id="formatos">Diferentes formatos</h2>
+        <p>Há uma grande diversidade de formatos entre os meios magnéticos. Uma parte essencial do trabalho de preservação destes suportes é conhecer as especificidades destes diferentes formatos e suas compatibilidades/incompatibilidades, evitando danos durante o processo:</p>
+        
+        <ul>
+            <li><strong>Formatos analógicos de rolo aberto:</strong> (anos 1950-70) 2 polegadas Quadruplex, 1 polegada (Tipos A, B, C), 1/2 polegada (PortaPak). Apresentam alto risco de obsolescência de equipamentos.</li>
+            <li><strong>Formatos analógicos em cassete:</strong> U-matic, Betacam (SP), VHS (S-VHS, Compact), Betamax, Hi8, U-Matic SP, Video 8.</li>
+            <li><strong>Formatos digitais em cassete:</strong> D1, D2, D3, D5, D6, D9, DVC Pro, Digital8, Digital Betacam, DVCAM, MiniDV.</li>
+        </ul>
 
-    <p>Há uma grande diversidade de formatos entre os meios magnéticos. Uma parte essencial do trabalho de preservação destes suportes é conhecer as especificidades destes diferentes formatos e suas compatibilidades/incompatibilidades, evitando danos durante o processo:</p>
-    <ul>
-        <li><strong>Formatos analógicos de rolo aberto:</strong> (anos 1950-70) 2 polegadas Quadruplex, 1 polegada (Tipos A, B, C), 1/2 polegada (PortaPak). Apresentam alto risco de obsolescência de equipamentos.</li>
-        <li><strong>Formatos analógicos em cassete:</strong> U-matic, Betacam (SP), VHS (S-VHS, Compact), Betamax, Hi8, U-Matic SP, Video 8.</li>
-        <li><strong>Formatos digitais em cassete:</strong> D1, D2, D3, D5, D6, D9, DVC Pro, Digital8, Digital Betacam, DVCAM, MiniDV.</li>
-    </ul>
+        <h2 id="caracteristicas">Características e vulnerabilidades das fitas magnéticas</h2>
 
-    <h2 id="caracteristicas">Características e vulnerabilidades das fitas magnéticas</h2>
+        <p>Mesmo armazenadas em condições ideais, as fitas magnéticas têm vida útil limitada e são suscetíveis à deterioração por diversos fatores. Conhecer os componentes materiais das fitas é importante para garantir a sua preservação. As fitas magnéticas podem ter diferentes formatos e composições químicas (óxidos metálicos, dióxido de cromo, partículas metálicas), sendo os seus principais componentes físicos:</p>
+        
+        <ul>
+            <li><strong>Camada superior (superfície magnética):</strong> contém partículas magnéticas (óxido de ferro, cobalto) suspensas em um material aglutinante, onde a gravação é armazenada.</li>
+            <li><strong>Substrato (base):</strong> geralmente plástico (PET, PVC), proporciona integridade estrutural. Fitas mais antigas podem ser de acetato, mais suscetíveis à Síndrome do Vinagre, um processo de degradação química irreversível, a ponto de inviabilizar o uso da fita.</li>
+            <li><strong>Camada inferior:</strong> em fitas de maior qualidade, é comum haver um revestimento não magnético na parte de trás da base, o qual auxilia na redução do atrito, na dissipação da carga estática e melhorar o enrolamento da fita nos carretéis.</li>
+        </ul>
+        
+        <p>Outro aspecto importante a ser considerado são os sistemas de cor. A codificação da cor varia, dependendo da região geográfica do material e de seu público, o que exige uma verificação apurada e a compatibilidade de equipamentos ou transcodificadores, caso contrário isso pode acarretar em problemas de cor ou ausência dela:</p>
 
-    <p>Mesmo armazenadas em condições ideais, as fitas magnéticas têm vida útil limitada e são suscetíveis à deterioração por diversos fatores. Conhecer os componentes materiais das fitas é importante para garantir a sua preservação. As fitas magnéticas podem ter diferentes formatos e composições químicas (óxidos metálicos, dióxido de cromo, partículas metálicas), sendo os seus principais componentes físicos:</p>
-    <ul>
-        <li><strong>Camada superior (superfície magnética):</strong> contém partículas magnéticas (óxido de ferro, cobalto) suspensas em um material aglutinante, onde a gravação é armazenada.</li>
-        <li><strong>Substrato (base):</strong> geralmente plástico (PET, PVC), proporciona integridade estrutural. Fitas mais antigas podem ser de acetato, mais suscetíveis à Síndrome do Vinagre, um processo de degradação química irreversível, a ponto de inviabilizar o uso da fita.</li>
-        <li><strong>Camada inferior:</strong> em fitas de maior qualidade, é comum haver um revestimento não magnético na parte de trás da base, o qual auxilia na redução do atrito, na dissipação da carga estática e melhorar o enrolamento da fita nos carretéis.</li>
-    </ul>
-    
-    <p>Outro aspecto importante a ser considerado são os sistemas de cor. A codificação da cor varia, dependendo da região geográfica do material e de seu público, o que exige uma verificação apurada e a compatibilidade de equipamentos ou transcodificadores, caso contrário isso pode acarretar em problemas de cor ou ausência dela:</p>
+        <ul>
+            <li><strong>NTSC:</strong> 525 linhas, 29.97 quadros/segundo (produção para América do Norte, parte significativa de países da América, como o Chile, e alguns países asiáticos).</li>
+            <li><strong>PAL:</strong> 625 linhas, 25 quadros/segundo (para produção de vídeos para uso na Europa, Austrália ou grande parte da Ásia, África e América do Sul. Há adaptações do padrão, como o PAL-M no Brasil e PAL-N na Argentina).</li>
+            <li><strong>SECAM:</strong> usado na Europa e África.</li>
+        </ul>
 
-    <ul>
-        <li>NTSC: 525 linhas, 29.97 quadros/segundo (produção para América do Norte, parte significativa de países da América, como o Chile, e alguns países asiáticos).</li>
-        <li>PAL: 625 linhas, 25 quadros/segundo (para produção de vídeos para uso na Europa, Austrália ou grande parte da Ásia, África e América do Sul. Há adaptações do padrão, como o PAL-M no Brasil e PAL-N na Argentina). </li>
-        <li>SECAM: usado na Europa e África.</li>
-    </ul>
+        <p>Para vídeos com alcance global, é importante verificar a compatibilidade dos aparelhos de reprodução. Existem alguns equipamentos "multi norma" ou "multi standard" que conseguem reproduzir NTSC e PAL, mas a compatibilidade deve sempre ser conferida para evitar problemas de distorção de som e imagem.</p>
 
-    <p>Para vídeos com alcance global, é importante verificar a compatibilidade dos aparelhos de reprodução. Existem alguns equipamentos “multi norma” ou “multi standard” que conseguem reproduzir NTSC e PAL, mas a compatibilidade deve sempre ser conferida para evitar problemas de distorção de som e imagem.</p>
+        <p>É importante reforçar o caráter de marcador temporal deste tipo de suporte: a qualidade da imagem e som em vídeo é reflexo de sua época, dos equipamentos de gravação. Preservar estes materiais significa guardar conteúdos, lugares e tempos específicos, que podem ser acessados e aproveitados por gerações posteriores.</p>
 
-    <p>É importante reforçar o caráter de marcador temporal deste tipo de suporte: a qualidade da imagem e som em vídeo é reflexo de sua época, dos equipamentos de gravação. Preservar estes materiais significa guardar conteúdos, lugares e tempos específicos, que podem ser acessados e aproveitados por gerações posteriores.</p>
+        <h2 id="cuidados">Cuidados e manuseio</h2>
 
-    <h2 id="cuidados">Cuidados e manuseio</h2>
+        <p>Assim como objetos e documentos que consideramos valiosos, as fitas magnéticas devem ser tratadas com atenção, exigindo manuseio cuidadoso, limpeza e bom senso:</p>
 
-    <p>
-        Assim como objetos e documentos que consideramos valiosos, as fitas magnéticas devem ser tratadas com atenção, exigindo manuseio cuidadoso, limpeza e bom senso:
-        </p>
+        <ul>
+            <li>Use e armazene as fitas em ambientes limpos.</li>
+            <li>Evite ao máximo a contaminação das fitas por sujeira, poeira, impressões digitais, comida, fumaça de cigarro e cinzas, e poluentes atmosféricos.</li>
+            <li>Não exponha a luz solar direta, calor excessivo ou água.</li>
+            <li>Utilize sempre estantes de aço e caixas plásticas (evite materiais como o papelão) para proteger as fitas e criar um microclima estável.</li>
+            <li>Tenha cuidado ao manusear para não deixar fitas ou cartuchos caírem no chão.</li>
+            <li>Não armazene fitas sobre radiadores, peitoris de janelas, televisores, equipamentos eletrônicos ou máquinas. Evite campos magnéticos fortes.</li>
+            <li>Durante transporte, evite expor a mais de 21°C, use proteção contra impactos e transporte na vertical.</li>
+            <li>No manuseio, sempre deve ser considerado para a equipe o uso de equipamentos de proteção tais como máscaras, luvas de nitrilo, óculos de segurança e jaleco.</li>
+        </ul>
 
-    <ul>
-        <li>Use e armazene as fitas em ambientes limpos.</li>
-        <li>Evite ao máximo a contaminação das fitas por sujeira, poeira, impressões digitais, comida, fumaça de cigarro e cinzas, e poluentes atmosféricos.</li>
-        <li>Não exponha a luz solar direta, calor excessivo ou água.</li>
-        <li>Utilize sempre estantes de aço e caixas plásticas (evite materiais como o papelão) para proteger as fitas e criar um microclima estável.</li>
-        <li>Tenha cuidado ao manusear para não deixar fitas ou cartuchos caírem no chão.</li>
-        <li>Não armazene fitas sobre radiadores, peitoris de janelas, televisores, equipamentos eletrônicos ou máquinas. Evite campos magnéticos fortes.</li>
-        <li>Durante transporte, evite expor a mais de 21°C, use proteção contra impactos e transporte na vertical.</li>
-        <li>o manuseio, sempre deve ser considerado para a equipe o uso de equipamentos de proteção tais como máscaras, luvas de nitrilo, óculos de segurança e jaleco.</li>
-    </ul>
+        <h2 id="degradacao">Fatores de degradação e condições de armazenamento</h2>
 
-    <h2 id="degradacao">Fatores de degradação e condições de armazenamento</h2>
+        <p>Como apontamos anteriormente, as mídias magnéticas são suportes frágeis, sujeitas a danos por diversos fatores e, principalmente, pela obsolescência dos formatos e falta de peças de reposição devido à interrupção da fabricação pela indústria, colocando-as numa posição de risco extremo. Alguns dos principais fatores de degradação são:</p>
+        
+        <ul>
+            <li>Calor e umidade relativa alta (hidrolisa o aglutinante).</li>
+            <li>Variações ambientais bruscas.</li>
+            <li>Poeira, sujeira, luz solar, campos magnéticos fortes.</li>
+            <li>Obsolescência de formatos e gravadores.</li>
+            <li>Manutenção escassa ou inadequada.</li>
+            <li>Uso excessivo ou manuseio inadequado.</li>
+        </ul>
 
-    <p>Como apontamos anteriormente, as mídias magnéticas são suportes frágeis, sujeitas a danos por diversos fatores e, principalmente, pela obsolescência dos formatos e falta de peças de reposição devido à interrupção da fabricação pela indústria, colocando-as numa posição de risco extremo. Alguns dos principais fatores de degradação são:</p>
-    
-    <ul>
-        <li>Calor e umidade relativa alta (hidrolisa o aglutinante).</li>
-        <li>Variações ambientais bruscas.</li>
-        <li>Poeira, sujeira, luz solar, campos magnéticos fortes.</li>
-        <li>Obsolescência de formatos e gravadores.</li>
-        <li>Manutenção escassa ou inadequada.</li>
-        <li>Uso excessivo ou manuseio inadequado.</li>
-    </ul>
+        <p>Para mitigar estes fatores, é fundamental que as mídias estejam em condições adequadas de armazenamento, garantindo uma vida útil mais ampla:</p>
 
-    <p>Para mitigar estes fatores, é fundamental que as mídias estejam em condições adequadas de armazenamento, garantindo uma vida útil mais ampla:</p>
+        <ul>
+            <li><strong>Ambiente:</strong> deve estar limpo e ter uma rotina regular de higienização, livre de contaminantes, sem janelas (evitar luz direta), e com uma estrutura que seja resistente ao fogo.</li>
+            <li><strong>Temperatura e Umidade:</strong> o mais importante é manter a estabilidade destes fatores no ambiente, mesmo que não sejam os valores ideais. A <abbr title="Association of Moving Image Archivists">AMIA</abbr> recomenda, por exemplo, 20°C e 20-30% de umidade relativa (<abbr title="Umidade Relativa">UR</abbr>), ajustando para temperaturas mais baixas para armazenamento a longo prazo (com necessidade de aclimatação antes da reprodução).</li>
+            <li><strong>Separação:</strong> fitas com problemas (mofo, Síndrome do Vinagre) devem ser isoladas para evitar contaminação.</li>
+        </ul>
 
-    <ul>
-        <li>Ambiente: deve estar limpo e ter uma rotina regular de higienização, livre de contaminantes, sem janelas (evitar luz direta), e com uma estrutura que seja resistente ao fogo.</li>
-        <li>Temperatura e Umidade (T/U): O mais importante é manter a estabilidade destes fatores no ambiente, mesmo que não sejam os valores ideais. A AMIA (Association of Moving Image Archivists) recomenda, por exemplo, 20°C e 20-30% de umidade relativa (UR), ajustando para temperaturas mais baixas para armazenamento a longo prazo (com necessidade de aclimatação antes da reprodução).</li>
-        <li>Separação: Fitas com problemas (mofo, Síndrome do Vinagre) devem ser isoladas para evitar contaminação.</li>
-    </ul>
+        <h2 id="preservacao">Práticas de preservação</h2>
 
-    <h2 id="preservacao">Práticas de preservação</h2>
+        <p>Identificação, inventário, diagnóstico, catalogação, acondicionamento, limpeza, manutenção e, como ressalta o arquivista audiovisual Ray Edmondson, o acesso: "preservação e acesso são duas faces da mesma moeda".</p>
 
-    <p>identificação, inventário, diagnóstico, catalogação, acondicionamento, limpeza, manutenção e, como ressalta o arquivista audiovisual Ray Edmondson, o acesso: “preservação e acesso são duas faces da mesma moeda”.</p>
+        <p>Estas práticas devem ser abrangentes quando se trata dos meios magnéticos, levando em conta as próprias coleções de fitas (seja qual for sua origem: caseira, TV, produção de coletivos, registros de história oral, etc) e também a documentação associada a estas fitas, documentos fundamentais para contextualização dos mesmos. Nesse sentido, é importante reiterar a importância de ter condições materiais e técnicas para a manutenção e operação dos equipamentos de reprodução.</p>
 
-    <p>Estas práticas devem ser abrangentes quando se trata dos meios magnéticos, levando em conta as próprias coleções de fitas (seja qual for sua origem: caseira, TV, produção de coletivos, registros de história oral, etc) e também e a documentação associada a estas fitas, documentos fundamentais para contextualização dos mesmos. Nesse sentido, é importante reiterar a importância de ter condições materiais e técnicas para a manutenção e operação dos equipamentos de reprodução.</p>
+        <p>Diferente dos filmes em película, o conteúdo das fitas magnéticas não é visível a olho nu, tornando-as totalmente dependentes destes equipamentos para a reprodução que a cada dia se tornam mais obsoletos e de difícil acesso.</p>
 
-    <p>Diferente dos filmes em película, o conteúdo das fitas magnéticas não é visível a olho nu, tornando-as totalmente dependentes destes equipamentos para a reprodução que a cada dia se tornam mais obsoletos e de difícil acesso.</p>
+        <p>Além de tudo que já foi apontado acima, algumas boas práticas de preservação incluem:</p>
 
-    <p>Além de tudo que já foi apontado acima, algumas boas práticas de preservação incluem:
-    </p>
+        <ul>
+            <li><strong>Documentação:</strong> registro detalhado e cuidadoso da quantidade de acervo, formatos, padrões, data, descrição de seu conteúdo, de seu estado de conservação, das ações realizadas (limpeza, restauração, digitalização), equipamentos utilizados e dos fluxos de trabalho estabelecidos.</li>
+            <li><strong>Manutenção de equipamentos:</strong> revisar regularmente os componentes mecânicos e elétricos dos reprodutores e equipamentos de leitura para evitar danos às fitas. Devem ser preservados também, se possível, os manuais técnicos para auxiliar as equipes envolvidas nesta atividade.</li>
+            <li><strong>Princípio da perda:</strong> necessidade de migração periódica de suporte, como a digitalização das fitas (trabalho que deve ser compreendido como apenas o início do processo de preservação, e não seu fim). Deve-se considerar e pesquisar sobre a migração dos conteúdos para novos formatos e mídias atualizadas, com periodicidade pré-determinada (exemplo: a cada 10–20 anos).</li>
+            <li><strong>Cópias múltiplas/redundância:</strong> após a digitalização, criar múltiplas cópias em diferentes suportes, marcas e locais geográficos, garantindo segurança contra acidentes, mau manuseio, falhas humanas ou sinistros.</li>
+            <li><strong>Considerações éticas:</strong> considerar sempre nos processos de captura a ética de "corrigir" artefatos que podem ser marcas da produção original ou da história tecnológica da fita.</li>
+            <li><strong>Intercâmbios institucionais:</strong> incentivar trocas e união de recursos e conhecimentos entre instituições para otimizar as práticas de preservação, bem como a inclusão das comunidades envolvidas na constituição destes acervos.</li>
+        </ul>
 
-    <ul>
-        <li>Documentação: registro detalhado e cuidadoso da quantidade de acervo, formatos, padrões, data, descrição de seu conteúdo, de seu estado de conservação, das ações realizadas (limpeza, restauração, digitalização), equipamentos utilizados e dos fluxos de trabalho estabelecidos.</li>
-        <li>Manutenção de equipamentos: revisar regularmente os componentes mecânicos e elétricos dos reprodutores e equipamentos de leitura para evitar danos às fitas. Devem ser preservados também, se possível, os manuais técnicos para auxiliar as equipes envolvidas nesta atividade.</li>
-        <li>Princípio da perda: necessidade de migração periódica de suporte, como a digitalização das fitas (trabalho que deve ser compreendido como apenas o início do processo de preservação, e não seu fim). Deve-se considerar e pesquisar sobre a migração dos conteúdos para novos formatos e mídias atualizadas, com periodicidade pré-determinada (Ex: a cada 10–20 anos).</li>
-        <li>Cópias múltiplas/redundância: após a digitalização, criar múltiplas cópias em diferentes suportes, marcas e locais geográficos, garantindo segurança contra acidentes, mau manuseio, falhas humanas ou sinistros.</li>
-        <li>Considerações éticas: considerar sempre nos processos de captura a ética de "corrigir" artefatos que podem ser marcas da produção original ou da história tecnológica da fita.</li>
-        <li>Intercâmbios institucionais: incentivar trocas e união de recursos e conhecimentos entre instituições para otimizar as práticas de preservação, bem como a inclusão das comunidades envolvidas na constituição destes acervos.</li>
+        <section class="referencias" id="referencias" aria-labelledby="titulo-referencias">
+            <h2 id="titulo-referencias">Referências</h2>
+            <ul>
+                <li>JIMENEZ, M.; PLATT, L. <cite>Video Tape Identification and Assessment Guide</cite>. Texas: Texas Commission on the Arts, 2004.</li>
+                <li>VAN BOGART, John W. C. <cite>Armazenamento e manuseio de fitas magnéticas</cite>. Rio de Janeiro: Arquivo Nacional, 2001. Disponível em: <a href="https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf" target="_blank" rel="noopener noreferrer">https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf</a>. Acesso em: 17 nov. 2025.</li>
+                <li>Associação Brasileira de Preservação Audiovisual (ABPA). <cite>Plano Nacional de Preservação Audiovisual</cite>. 2023. Disponível em: <a href="https://abpanet.org/plano-nacional-de-preservacao-audiovisual/" target="_blank" rel="noopener noreferrer">https://abpanet.org/plano-nacional-de-preservacao-audiovisual/</a>. Acesso em: 17 nov. 2025.</li>
+                <li>BRASIL. Ministério da Cultura. <cite>Manual de referência de condições técnicas e infraestrutura para acervos e arquivos audiovisuais brasileiros</cite>. Brasília: Secretaria do Audiovisual, 2025. Disponível em: <a href="https://www.gov.br/cultura/pt-br/centrais-de-conteudo/publicacoes/manual-de-referencia-de-condicoes-tecnicas-e-infraestrutura-para-arquivos-audiovisuais-brasileiros/manual-de-referencia-de-condicoes-tecnicas-e-infraestrutura-para-arquivos-audiovisuais-brasileiros.pdf" target="_blank" rel="noopener noreferrer">Manual de referência (PDF)</a>. Acesso em: 17 nov. 2025.</li>
+            </ul>
 
-    </ul>
+            <p>O Museu da Pessoa é um museu virtual e colaborativo que desde 1991 se dedica a preservar e disseminar histórias de vidas de toda e qualquer pessoa. Para desenvolver este material, contou com a parceria da WITNESS, organização global que auxilia pessoas a usar a tecnologia audiovisual para contar suas histórias, e em defesa dos direitos humanos.</p>
+            
+            <p>Conheça mais em:</p>
+            <ul>
+                <li><a href="https://museudapessoa.org" target="_blank" rel="noopener noreferrer">museudapessoa.org</a></li>
+                <li><a href="https://portugues.witness.org/brazil/" target="_blank" rel="noopener noreferrer">portugues.witness.org/brazil/</a></li>
+            </ul>
+        </section>
 
+        <section class="ficha-tecnica" id="ficha-tecnica" aria-labelledby="titulo-ficha">
+            <h2 id="titulo-ficha">Ficha Técnica</h2>
+            
+            <p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
+            <p><strong>Coordenação da Produção:</strong> Marcos Terra</p>
+            <p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
+            <p><strong>Consultoria Técnica:</strong> WITNESS</p>
+            <p><strong>Revisão Técnica:</strong> Ines Aisengart Menezes, Mariela Cantú</p>
+            <p><strong>Projeto Gráfico:</strong> Mariana Afonso</p>
+            <p><strong>Web desenvolvimento:</strong> Elsa Villon</p>
+            
+            <h3>Museu da Pessoa</h3>
+            
+            <p><strong>Associados:</strong> Ana Wilheim, Carla Nóbrega, Carlos Seabra, Carolina Misorelli, Celia Picon, Cláudia Leonor, Elza Lobo (in memoriam), Fernando Von Oertzen, Heloísa Nogueira, Immaculada Prieto, Iris Kantor, José Santos Matos, José Guilherme Mauger, Karen Worcman, Luiz Egypto de Cerqueira, Marcia Trezza, Maria Francisca dos Santos e Passos, Mauro Malin, Roberto da Silva (in memoriam), Rosali Nunes Henriques, Rosana Miziara, Sandra Sinicco, Sergio Ajzenberg (in memoriam), Sonia London, Silvia Carvalho, Zilda Kessel</p>
+            
+            <p><strong>Conselho Diretor:</strong> Karen Worcman (Presidente), Beatriz Azeredo, Denise Barbosa, Jairo Duarte, Maria Francisca dos Santos e Passos, Marcos Oliveira, Tom Mendes</p>
+            
+            <p><strong>Conselho Fiscal:</strong> José Guilherme Mauger, Leandro Salatti, Antonio Salles</p>
+            
+            <p><strong>Comitê Honorário:</strong> Alberto Dines (in memoriam), Celia Picon, Danilo Miranda (in memoriam), Eliezer Batista (in memoriam), José Eduardo Bandeira de Mello, Lisandra Alves, Octavio Barros, Paul Thompson, Paulo Nassar, Roberto da Silva (in memoriam), Tom Gillespie, Wellington Nogueira</p>
+            
+            <p><strong>Comitê Gestor:</strong> Beatriz Azeredo, Carla Nobrega, Gustavo Gonzaga, Tiago Lara</p>
+            
+            <p><strong>Comitê de Compliance:</strong> Cynara Reinert, José Guilherme Mauger, Luiz Egypto de Cerqueira, Maria Francisca Passos</p>
+            
+            <p><strong>Comitê Curatorial:</strong> Bel Santos Mayer, Barbara Trugillo, Paulo Endo</p>
+            
+            <p><strong>Direção Executiva:</strong> Karen Worcman, Marcos Terra</p>
+            
+            <p><strong>Relações Institucionais e Governamentais:</strong> Rosana Miziara, Anna Miranda</p>
+            
+            <p><strong>Museologia:</strong> Lucas Lara, Felipe Rocha, Renata Pante, Beatriz Saghaard, Teresa de Carvalho, Paola Valentina Xavier, Priscila Gomes, Estfani da Costa, Jefferson Trindade, Charles Pankararu, Nicolau da Conceição, Grace Jacobson</p>
+            
+            <p><strong>Colaboração:</strong> Marcela Lanza Tripoli, Marcia Trezza, Jonas Samaúma, Aline Scolfaro, Sônia Helena London, Levi Andrade</p>
+            
+            <p><strong>Museu Digital:</strong> Odilon Gonçalves, Amanda Lira, Isadora Catem Santos, Leandro Almeida, Thiago Magalhães, Ariane Permonian, Ana Gomes, Milena López</p>
+            
+            <p><strong>Gestão e Operação:</strong> Allan Russo Fava, Dalci Alves da Silva, Eduardo Valente, Juliana Gervaes, Larissa Pinna, Lucas Torigoe, Ane Alves, Bruna Gelangauskas, Lynda Dixon, Alice Silva, Luiza Gallo, Bruna Ghirardello, Samantha Xavier, Sofia Petro</p>
+        </section>
 
-<section class="referencias" id="referencias">
-        <h2>Referências</h2>
-        <p><strong>JIMENEZ, M.; PLATT, L.</strong> <em>Video Tape Identification and Assessment Guide</em>. Texas: Texas Commission on the Arts, 2004.</p>
-        <p><strong>VAN BOGART, John W. C.</strong> <em>Armazenamento e manuseio de fitas magnéticas</em>. Rio de Janeiro: Arquivo Nacional, 2001. Disponível em: <a href="https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf" target="_blank">https://arqsp.org.br/wp-content/uploads/2017/07/42.pdf</a>. Acesso em: <strong>17 nov. 2025</strong>.</p>
-        <p><strong>Associação Brasileira de Preservação Audiovisual (ABPA).</strong> <em>Plano Nacional de Preservação Audiovisual</em>. 2023. Disponível em: <a href="https://abpanet.org/plano-nacional-de-preservacao-audiovisual/" target="_blank">https://abpanet.org/plano-nacional-de-preservacao-audiovisual/</a>. Acesso em: <strong>17 nov. 2025</strong>.</p>
-        <p><strong>BRASIL. Ministério da Cultura.</strong> <em> Manual de referência de condições técnicas e infraestrutura para acervos e arquivos audiovisuais brasileiros. Brasília: Secretaria do Audiovisual,</em> 2025. Disponível em: <a href="https://www.gov.br/cultura/pt-br/centrais-de-conteudo/publicacoes/manual-de-referencia-de-condicoes-tecnicas-e-infraestrutura-para-arquivos-audiovisuais-brasileiros/manual-de-referencia-de-condicoes-tecnicas-e-infraestrutura-para-arquivos-audiovisuais-brasileiros.pdf" target="_blank">Link para o PDF</a>. Acesso em: <strong>17 nov. 2025</strong>.</p>
-   
-    <p>O Museu da Pessoa é um museu virtual e colaborativo que desde 1991 se dedica a preservar e disseminar histórias de vidas de toda e qualquer pessoa. Para desenvolver este material, contou com a parceria da WITNESS,  organização global que auxilia pessoas a usar a tecnologia audiovisual para contar suas histórias, e em defesa dos direitos humanos.</p>
-    <p>Conheça mais em:</p>
+        <footer>
+            <p>Este material e as demais ações deste projeto foram realizados com recursos por meio do Programa de Ação Cultural – ProAC, da Secretaria da Cultura, Economia e Indústria Criativas do Governo do Estado de São Paulo.</p>
+        </footer>
 
-    <p><a href="museudapessoa.org"> museudapessoa.org</a></p>
-    <p><a href="portugues.witness.org/brazil/">portugues.witness.org/brazil/</a></p>
+    </main>
 
-</section>
-
-<section class="ficha-tecnica" id="ficha-tecnica">
-
-<h2>Ficha Técnica</h2>
-<p><strong>Coordenação de Projeto:</strong> Felipe Rocha</p>
-<p><strong>Coordenação da Produção:</strong> Marcos Terra</p>
-<p><strong>Pesquisa e textos:</strong> Felipe Rocha</p>
-<p><strong>Consultoria Técnica:</strong> WITNESS</p>
-<p><strong>Revisão Técnica:</strong> Ines Aisengart Menezes</p> 
-    <p>Mariela Cantú</p>
-<p><strong>Projeto Gráfico:</strong> Mariana Afonso</p>
-<p><strong>Web desenvolvimento:</strong>Elsa Villon</p>
-<p><strong><u>Museu da Pessoa</u></strong></p>
-<p><strong>Associados:</strong>Ana Wilheim | Carla Nóbrega | Carlos Seabra | Carolina Misorelli | Celia Picon | Cláudia Leonor | Elza Lobo (in memorian) | Fernando Von Oertzen | Heloísa Nogueira | Immaculada Prieto | Iris Kantor | José Santos Matos | José Guilherme Mauger | Karen Worcman | Luiz Egypto de Cerqueira | Marcia Trezza | Maria Francisca dos Santos e Passos | Mauro Malin | Roberto da Silva (in memorian)| Rosali Nunes Henriques | Rosana Miziara | Sandra Sinicco | Sergio Ajzenberg (in memoriam) | Sonia London | Silvia Carvalho | Zilda Kessel </p>
-<p><strong>Conselho Diretor:</strong> Karen Worcman (Presidente) | Beatriz Azeredo | Denise Barbosa | Jairo Duarte | Maria Francisca dos Santos e Passos | Marcos Oliveira | Tom Mendes</p>
-<p><strong>Conselho Fiscal:</strong>José Guilherme Mauger | Leandro Salatti | Antonio Salles</p>
-<p><strong>Comitê Honorário:</strong>Alberto Dines (in memoriam) | Celia Picon | Danilo Miranda (in memoriam) | Eliezer Batista (in memoriam) | José Eduardo Bandeira de Mello  | Lisandra Alves | Octavio Barros | Paul Thompson | Paulo Nassar | Roberto da Silva (in memoriam) | Tom Gillespie | Wellington Nogueira</p>
-<p><strong>Comitê Gestor:</strong>Beatriz Azeredo | Carla Nobrega | Gustavo Gonzaga | Tiago Lara</p>
-<p><strong>Comitê de Compliance:</strong>Cynara Reinert | José Guilherme Mauger | Luiz Egypto de Cerqueira| Maria Francisca Passos</p>
-<p><strong>Comitê Curatorial:</strong>Bel Santos Mayer | Barbara Trugillo | Paulo Endo</p>
-<p><strong>Direção Executiva:</strong>Karen Worcman | Marcos Terra</p>
-<p><strong>Relações Institucionais e Governamentais:</strong>Rosana Miziara | Anna Miranda</p>
-<p><strong>Museologia:</strong>Lucas Lara | Felipe Rocha | Renata Pante | Beatriz Saghaard | Teresa de Carvalho | Paola Valentina Xavier | Priscila Gomes | Estfani da Costa | Jefferson Trindade | Charles Pankararu | Nicolau da Conceição | Grace Jacobson</p>
-<p><strong>Colaboração:</strong>Marcela Lanza Tripoli | Marcia Trezza | Jonas Samaúma | Aline Scolfaro | Sônia Helena London | Levi Andrade</p>
-<p><strong>Museu Digital:</strong>Odilon Gonçalves | Amanda Lira | Isadora Catem Santos | Leandro Almeida | Thiago Magalhães | Ariane Permonian | Ana Gomes | Milena López</p>
-<p><strong>Gestão e Operação:</strong>Allan Russo Fava | Dalci Alves da Silva | Eduardo Valente | Juliana Gervaes | Larissa Pinna | Lucas Torigoe | Ane Alves | Bruna Gelangauskas | Lynda Dixon | Alice Silva | Luiza Gallo | Bruna Ghirardello | Samantha Xavier | Sofia Petro
-</p>
-
-
-</section>
-
-<footer>
-<p class="small-text">
-    Este material e as demais ações deste projeto foram realizados com recursos por meio do Programa de Ação Cultural – ProAC, da Secretaria da Cultura, Economia e Indústria Criativas do Governo do Estado de São Paulo.
-</p>
-</footer>
-
-</main>
-
-<script>
-    function toggleMenu() {
-        document.querySelector('.side-menu').classList.toggle('active');
-        document.querySelector('.overlay').classList.toggle('active');
-    }
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.side-menu');
+            const toggle = document.querySelector('.menu-toggle');
+            const overlay = document.querySelector('.overlay');
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            toggle.setAttribute('aria-label', isExpanded ? 'Abrir menu de navegação' : 'Fechar menu de navegação');
+            
+            if (!isExpanded) {
+                menu.setAttribute('aria-hidden', 'false');
+            } else {
+                menu.setAttribute('aria-hidden', 'true');
+            }
+        }
     </script>
     
 </body>
