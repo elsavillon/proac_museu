@@ -66,6 +66,29 @@ body.cartilha {
 }
 
 /* =========================
+   SKIP LINK (ACESSIBILIDADE)
+========================= */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* =========================
    BASE
 ========================= */
 
@@ -402,10 +425,31 @@ img {
   width: 250px;
   height: 100vh;
   background: var(--menu-bg);
-  padding: 80px 0 20px;
+  padding: 80px 20px 20px 0;
   transition: left 0.35s cubic-bezier(0.77, 0, 0.18, 1);
   z-index: 1000;
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--menu-accent) var(--menu-bg);
+}
+
+/* Estilização da barra de rolagem para Webkit (Chrome, Safari, Edge) */
+.side-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+  background: var(--menu-bg);
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: var(--menu-accent);
+  border-radius: 4px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--menu-hover);
 }
 
 .side-menu.active {
@@ -415,7 +459,7 @@ img {
 .side-menu ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 80px 0;
 }
 
 .side-menu li {
@@ -527,7 +571,8 @@ img {
 @media print {
   .menu-toggle,
   .side-menu,
-  .overlay {
+  .overlay,
+  .skip-link {
     display: none;
   }
 
@@ -545,27 +590,4 @@ img {
     content: " (" attr(href) ")";
     font-size: 0.8em;
   }
-}
-
-/* =========================
-   SKIP LINK (ACESSIBILIDADE)
-========================= */
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent-color);
-  color: #fff;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: 700;
-  z-index: 10000;
-  border-radius: 0 0 4px 0;
-}
-
-.skip-link:focus {
-  top: 0;
-  outline: 3px solid #fff;
-  outline-offset: 2px;
 }
